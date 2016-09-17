@@ -31,10 +31,7 @@
     [Appirater setDebug:NO];
     
     [Appirater appLaunched:YES];
-//    MainViewController *mainVC = [[MainViewController alloc] init];
-//    UINavigationController *navigationController = [[UINavigationController alloc]initWithRootViewController:mainVC];
-//    self.window.rootViewController = navigationController;
-//    
+
     [[UINavigationBar appearance] setBarTintColor: [UIColor primaryColor]];
     [[UINavigationBar appearance] setTitleTextAttributes:@{NSForegroundColorAttributeName : [UIColor whiteColor]}];
     

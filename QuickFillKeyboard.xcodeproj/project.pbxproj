@@ -257,8 +257,8 @@
 			isa = PBXGroup;
 			children = (
 				6BC370581C188D98006EB6C7 /* QuickFill.entitlements */,
-				6BC370551C161A79006EB6C7 /* QuickFill.h */,
 				6BE2C3FF1D8D8A4300C9E488 /* QuickFill.xib */,
+				6BC370551C161A79006EB6C7 /* QuickFill.h */,
 				6BC370561C161A79006EB6C7 /* QuickFill.m */,
 				6B1AA0211C04FD0F00C729CD /* KeyboardViewController.h */,
 				6B1AA0221C04FD0F00C729CD /* KeyboardViewController.m */,

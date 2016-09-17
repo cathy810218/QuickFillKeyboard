@@ -8,6 +8,7 @@
 
 #import "KeyboardViewController.h"
 #import "QuickFill.h"
+#import "InfoViewController.h"
 #import <QuartzCore/QuartzCore.h>
 @interface KeyboardViewController ()
 @property (nonatomic, strong) QuickFill *myKeyboard;
@@ -24,7 +25,6 @@
     [super updateViewConstraints];
     // Add custom view sizing constraints here
 }
-
 
 - (void)setKeyboardKey:(UIButton *)btn withKey:(NSString *)name{
     btn.layer.cornerRadius = 5.0;
@@ -48,7 +48,17 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self initKeyboard];
+    self.myKeyboard = [[QuickFill alloc]init];
+    self.myKeyboard = [[[NSBundle mainBundle] loadNibNamed:@"QuickFill" owner:self options:nil] objectAtIndex:0];
+    self.inputView = (UIInputView *)self.myKeyboard;
+
+    self.myKeyboard.bounds = CGRectMake(0, 0, 350, 200);
+    self.myKeyboard.nextKeyboard.layer.cornerRadius = 5.0;
+    self.myKeyboard.nextKeyboard.layer.masksToBounds = false;
+    self.myKeyboard.nextKeyboard.layer.shadowOpacity = 1.0;
+    self.myKeyboard.nextKeyboard.layer.shadowRadius = 0;
+    self.myKeyboard.nextKeyboard.layer.shadowOffset = CGSizeMake(0, 1.0);
+    self.myKeyboard.nextKeyboard.layer.shadowColor = [UIColor grayColor].CGColor;
     
     [self setKeyboardKey:self.myKeyboard.city withKey: NSLocalizedString(@"city",nil)];
     [self setKeyboardKey:self.myKeyboard.state withKey: NSLocalizedString(@"state",nil)];
@@ -65,7 +75,6 @@
 
     
     [self addGestureToKeyboard];
-    self.inputView = (UIInputView *)self.myKeyboard;
     
     UIImage *globalImg = [UIImage imageNamed:@"gkey.png"];
     [self.myKeyboard.nextKeyboard setImage:globalImg forState:UIControlStateNormal];
@@ -76,22 +85,6 @@
     NSLog(@"%@",userInfo[@"firstName"]);
     
     
-}
-
-- (void)initKeyboard {
-    self.myKeyboard = [[QuickFill alloc]init];
-    self.myKeyboard = [[[NSBundle mainBundle] loadNibNamed:@"QuickFill" owner:self options:nil] objectAtIndex:0];
-    
-
-}
-
-- (void)drawNextKeyboardKey {
-    self.myKeyboard.nextKeyboard.layer.cornerRadius = 5.0;
-    self.myKeyboard.nextKeyboard.layer.masksToBounds = false;
-    self.myKeyboard.nextKeyboard.layer.shadowOpacity = 1.0;
-    self.myKeyboard.nextKeyboard.layer.shadowRadius = 0;
-    self.myKeyboard.nextKeyboard.layer.shadowOffset = CGSizeMake(0, 1.0);
-    self.myKeyboard.nextKeyboard.layer.shadowColor = [UIColor grayColor].CGColor;
 }
 
 - (void)textWillChange:(id<UITextInput>)textInput {
