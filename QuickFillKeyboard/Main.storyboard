@@ -114,9 +114,17 @@
                                 <rect key="frame" x="0.0" y="556" width="600" height="44"/>
                                 <items>
                                     <barButtonItem width="42" style="plain" systemItem="fixedSpace" id="LYn-oz-zLG"/>
-                                    <barButtonItem title="Clear All" id="58f-6V-zqy"/>
+                                    <barButtonItem title="Clear All" id="58f-6V-zqy">
+                                        <connections>
+                                            <action selector="clearAllAction:" destination="qfc-ZP-N4W" id="uwo-Tf-ALw"/>
+                                        </connections>
+                                    </barButtonItem>
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="UvI-yL-rS6"/>
-                                    <barButtonItem title="Save" id="sji-fh-yM4"/>
+                                    <barButtonItem title="Save" id="sji-fh-yM4">
+                                        <connections>
+                                            <action selector="finishAction:" destination="qfc-ZP-N4W" id="w5o-9N-SGV"/>
+                                        </connections>
+                                    </barButtonItem>
                                     <barButtonItem width="42" style="plain" systemItem="fixedSpace" id="iqt-d9-RBm"/>
                                 </items>
                             </toolbar>

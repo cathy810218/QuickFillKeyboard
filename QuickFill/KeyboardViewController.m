@@ -12,7 +12,6 @@
 #import <QuartzCore/QuartzCore.h>
 @interface KeyboardViewController ()
 @property (nonatomic, strong) QuickFill *myKeyboard;
-@property (nonatomic, strong) UIPasteboard *pasteboard;
 @property (nonatomic, strong) UILongPressGestureRecognizer *lpgr;
 @property NSTimer *timer;
 @property int timeCount;
