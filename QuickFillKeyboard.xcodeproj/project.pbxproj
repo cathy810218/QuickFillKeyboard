@@ -1,0 +1,944 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		23BD50017288AD543551632D /* libPods-QuickFill.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 706124D399E914E3A2A8B68C /* libPods-QuickFill.a */; };
+		610431B8CA94F093A7916B10 /* libPods-QuickFillKeyboardTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DA54BB5AAF342A997DB22E96 /* libPods-QuickFillKeyboardTests.a */; };
+		6B03308C1D8BF3E200502699 /* HelpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B0330891D8BF3E200502699 /* HelpViewController.m */; };
+		6B03308D1D8BF3E200502699 /* MainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B03308B1D8BF3E200502699 /* MainViewController.m */; };
+		6B0330901D8BF44700502699 /* Constants.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B03308F1D8BF44700502699 /* Constants.m */; };
+		6B1A9FEA1C04FCE800C729CD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B1A9FE91C04FCE800C729CD /* main.m */; };
+		6B1A9FED1C04FCE800C729CD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B1A9FEC1C04FCE800C729CD /* AppDelegate.m */; };
+		6B1A9FF01C04FCE800C729CD /* InfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B1A9FEF1C04FCE800C729CD /* InfoViewController.m */; };
+		6B1A9FF51C04FCE800C729CD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6B1A9FF41C04FCE800C729CD /* Assets.xcassets */; };
+		6B1AA0031C04FCE800C729CD /* QuickFillKeyboardTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B1AA0021C04FCE800C729CD /* QuickFillKeyboardTests.m */; };
+		6B1AA00E1C04FCE800C729CD /* QuickFillKeyboardUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B1AA00D1C04FCE800C729CD /* QuickFillKeyboardUITests.m */; };
+		6B1AA0231C04FD0F00C729CD /* KeyboardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B1AA0221C04FD0F00C729CD /* KeyboardViewController.m */; };
+		6B1AA0271C04FD0F00C729CD /* QuickFill.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 6B1AA01F1C04FD0F00C729CD /* QuickFill.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		6B2212B71D8C4A9D00663AE0 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6B2212B51D8C4A9D00663AE0 /* Localizable.strings */; };
+		6BC370571C161A79006EB6C7 /* QuickFill.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC370561C161A79006EB6C7 /* QuickFill.m */; };
+		6BE2C3FE1D8D88F000C9E488 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6BE2C3FD1D8D88F000C9E488 /* Main.storyboard */; };
+		6BE2C4001D8D8A4300C9E488 /* QuickFill.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6BE2C3FF1D8D8A4300C9E488 /* QuickFill.xib */; };
+		6BE2C4061D8D8FE300C9E488 /* UIColor+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BE2C4051D8D8FE300C9E488 /* UIColor+Extension.m */; };
+		C04809530FD33714B7891AEC /* libPods-QuickFillKeyboard.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2375A9536D5206894590D330 /* libPods-QuickFillKeyboard.a */; };
+		D4F400FC224D4BB6B80E41F8 /* libPods-QuickFillKeyboardUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4DDD090A5233E7EF038BBCEA /* libPods-QuickFillKeyboardUITests.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		6B1A9FFF1C04FCE800C729CD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6B1A9FDD1C04FCE800C729CD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6B1A9FE41C04FCE800C729CD;
+			remoteInfo = QuickFillKeyboard;
+		};
+		6B1AA00A1C04FCE800C729CD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6B1A9FDD1C04FCE800C729CD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6B1A9FE41C04FCE800C729CD;
+			remoteInfo = QuickFillKeyboard;
+		};
+		6B1AA0251C04FD0F00C729CD /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 6B1A9FDD1C04FCE800C729CD /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 6B1AA01E1C04FD0F00C729CD;
+			remoteInfo = QuickFill;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		6B1AA02B1C04FD0F00C729CD /* Embed App Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+				6B1AA0271C04FD0F00C729CD /* QuickFill.appex in Embed App Extensions */,
+			);
+			name = "Embed App Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		2375A9536D5206894590D330 /* libPods-QuickFillKeyboard.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-QuickFillKeyboard.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		438B0E0B01F7E5318BF67E74 /* Pods-QuickFillKeyboardTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QuickFillKeyboardTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-QuickFillKeyboardTests/Pods-QuickFillKeyboardTests.release.xcconfig"; sourceTree = "<group>"; };
+		4DDD090A5233E7EF038BBCEA /* libPods-QuickFillKeyboardUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-QuickFillKeyboardUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		502F37706B3C47A10FC47FD5 /* Pods-QuickFillKeyboardTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QuickFillKeyboardTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-QuickFillKeyboardTests/Pods-QuickFillKeyboardTests.debug.xcconfig"; sourceTree = "<group>"; };
+		5613C90C72207545C6DB3864 /* Pods-QuickFillKeyboardUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QuickFillKeyboardUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-QuickFillKeyboardUITests/Pods-QuickFillKeyboardUITests.release.xcconfig"; sourceTree = "<group>"; };
+		56812736307C5D0B5322059D /* Pods-QuickFillKeyboard.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QuickFillKeyboard.debug.xcconfig"; path = "Pods/Target Support Files/Pods-QuickFillKeyboard/Pods-QuickFillKeyboard.debug.xcconfig"; sourceTree = "<group>"; };
+		6B0330881D8BF3E200502699 /* HelpViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HelpViewController.h; sourceTree = "<group>"; };
+		6B0330891D8BF3E200502699 /* HelpViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HelpViewController.m; sourceTree = "<group>"; };
+		6B03308A1D8BF3E200502699 /* MainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MainViewController.h; sourceTree = "<group>"; };
+		6B03308B1D8BF3E200502699 /* MainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MainViewController.m; sourceTree = "<group>"; };
+		6B03308E1D8BF44700502699 /* Constants.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Constants.h; sourceTree = "<group>"; };
+		6B03308F1D8BF44700502699 /* Constants.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Constants.m; sourceTree = "<group>"; };
+		6B1A9FE51C04FCE800C729CD /* QuickFillKeyboard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QuickFillKeyboard.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		6B1A9FE91C04FCE800C729CD /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		6B1A9FEB1C04FCE800C729CD /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		6B1A9FEC1C04FCE800C729CD /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		6B1A9FEE1C04FCE800C729CD /* InfoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = InfoViewController.h; sourceTree = "<group>"; };
+		6B1A9FEF1C04FCE800C729CD /* InfoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = InfoViewController.m; sourceTree = "<group>"; };
+		6B1A9FF41C04FCE800C729CD /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		6B1A9FF91C04FCE800C729CD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6B1A9FFE1C04FCE800C729CD /* QuickFillKeyboardTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QuickFillKeyboardTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		6B1AA0021C04FCE800C729CD /* QuickFillKeyboardTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QuickFillKeyboardTests.m; sourceTree = "<group>"; };
+		6B1AA0041C04FCE800C729CD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6B1AA0091C04FCE800C729CD /* QuickFillKeyboardUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QuickFillKeyboardUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		6B1AA00D1C04FCE800C729CD /* QuickFillKeyboardUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = QuickFillKeyboardUITests.m; sourceTree = "<group>"; };
+		6B1AA00F1C04FCE800C729CD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6B1AA01F1C04FD0F00C729CD /* QuickFill.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.app-extension"; includeInIndex = 0; path = QuickFill.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		6B1AA0211C04FD0F00C729CD /* KeyboardViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = KeyboardViewController.h; sourceTree = "<group>"; };
+		6B1AA0221C04FD0F00C729CD /* KeyboardViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = KeyboardViewController.m; sourceTree = "<group>"; };
+		6B1AA0241C04FD0F00C729CD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		6B2212B61D8C4A9D00663AE0 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Localizable.strings"; sourceTree = "<group>"; };
+		6B2212B81D8C4AA600663AE0 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
+		6BC370551C161A79006EB6C7 /* QuickFill.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuickFill.h; sourceTree = "<group>"; };
+		6BC370561C161A79006EB6C7 /* QuickFill.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuickFill.m; sourceTree = "<group>"; };
+		6BC370581C188D98006EB6C7 /* QuickFill.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = QuickFill.entitlements; sourceTree = "<group>"; };
+		6BC370591C188E4A006EB6C7 /* QuickFillKeyboard.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = QuickFillKeyboard.entitlements; sourceTree = "<group>"; };
+		6BE2C3FD1D8D88F000C9E488 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		6BE2C3FF1D8D8A4300C9E488 /* QuickFill.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QuickFill.xib; sourceTree = "<group>"; };
+		6BE2C4041D8D8FE300C9E488 /* UIColor+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Extension.h"; sourceTree = "<group>"; };
+		6BE2C4051D8D8FE300C9E488 /* UIColor+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Extension.m"; sourceTree = "<group>"; };
+		706124D399E914E3A2A8B68C /* libPods-QuickFill.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-QuickFill.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		96C4E11BC02BF83236DA3C6F /* Pods-QuickFillKeyboard.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QuickFillKeyboard.release.xcconfig"; path = "Pods/Target Support Files/Pods-QuickFillKeyboard/Pods-QuickFillKeyboard.release.xcconfig"; sourceTree = "<group>"; };
+		9CBFF22F382284E6856D7C60 /* Pods-QuickFill.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QuickFill.debug.xcconfig"; path = "Pods/Target Support Files/Pods-QuickFill/Pods-QuickFill.debug.xcconfig"; sourceTree = "<group>"; };
+		A3B0FE49C239881B50E287A6 /* Pods-QuickFill.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QuickFill.release.xcconfig"; path = "Pods/Target Support Files/Pods-QuickFill/Pods-QuickFill.release.xcconfig"; sourceTree = "<group>"; };
+		DA54BB5AAF342A997DB22E96 /* libPods-QuickFillKeyboardTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-QuickFillKeyboardTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E091C4F7B5DA73660D4E2A53 /* Pods-QuickFillKeyboardUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QuickFillKeyboardUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-QuickFillKeyboardUITests/Pods-QuickFillKeyboardUITests.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		6B1A9FE21C04FCE800C729CD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C04809530FD33714B7891AEC /* libPods-QuickFillKeyboard.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6B1A9FFB1C04FCE800C729CD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				610431B8CA94F093A7916B10 /* libPods-QuickFillKeyboardTests.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6B1AA0061C04FCE800C729CD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D4F400FC224D4BB6B80E41F8 /* libPods-QuickFillKeyboardUITests.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6B1AA01C1C04FD0F00C729CD /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				23BD50017288AD543551632D /* libPods-QuickFill.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		17B67A7F888324FA08BC2336 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				706124D399E914E3A2A8B68C /* libPods-QuickFill.a */,
+				2375A9536D5206894590D330 /* libPods-QuickFillKeyboard.a */,
+				DA54BB5AAF342A997DB22E96 /* libPods-QuickFillKeyboardTests.a */,
+				4DDD090A5233E7EF038BBCEA /* libPods-QuickFillKeyboardUITests.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		20E0C8993A57B2981E6D44CA /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9CBFF22F382284E6856D7C60 /* Pods-QuickFill.debug.xcconfig */,
+				A3B0FE49C239881B50E287A6 /* Pods-QuickFill.release.xcconfig */,
+				56812736307C5D0B5322059D /* Pods-QuickFillKeyboard.debug.xcconfig */,
+				96C4E11BC02BF83236DA3C6F /* Pods-QuickFillKeyboard.release.xcconfig */,
+				502F37706B3C47A10FC47FD5 /* Pods-QuickFillKeyboardTests.debug.xcconfig */,
+				438B0E0B01F7E5318BF67E74 /* Pods-QuickFillKeyboardTests.release.xcconfig */,
+				E091C4F7B5DA73660D4E2A53 /* Pods-QuickFillKeyboardUITests.debug.xcconfig */,
+				5613C90C72207545C6DB3864 /* Pods-QuickFillKeyboardUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		6B1A9FDC1C04FCE800C729CD = {
+			isa = PBXGroup;
+			children = (
+				6B1A9FE71C04FCE800C729CD /* QuickFillKeyboard */,
+				6B1AA0011C04FCE800C729CD /* QuickFillKeyboardTests */,
+				6B1AA00C1C04FCE800C729CD /* QuickFillKeyboardUITests */,
+				6B1AA0201C04FD0F00C729CD /* QuickFill */,
+				6B1A9FE61C04FCE800C729CD /* Products */,
+				20E0C8993A57B2981E6D44CA /* Pods */,
+				17B67A7F888324FA08BC2336 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		6B1A9FE61C04FCE800C729CD /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6B1A9FE51C04FCE800C729CD /* QuickFillKeyboard.app */,
+				6B1A9FFE1C04FCE800C729CD /* QuickFillKeyboardTests.xctest */,
+				6B1AA0091C04FCE800C729CD /* QuickFillKeyboardUITests.xctest */,
+				6B1AA01F1C04FD0F00C729CD /* QuickFill.appex */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		6B1A9FE71C04FCE800C729CD /* QuickFillKeyboard */ = {
+			isa = PBXGroup;
+			children = (
+				6BC370591C188E4A006EB6C7 /* QuickFillKeyboard.entitlements */,
+				6BE2C4041D8D8FE300C9E488 /* UIColor+Extension.h */,
+				6BE2C4051D8D8FE300C9E488 /* UIColor+Extension.m */,
+				6B03308E1D8BF44700502699 /* Constants.h */,
+				6B03308F1D8BF44700502699 /* Constants.m */,
+				6B1A9FEB1C04FCE800C729CD /* AppDelegate.h */,
+				6B1A9FEC1C04FCE800C729CD /* AppDelegate.m */,
+				6B0330881D8BF3E200502699 /* HelpViewController.h */,
+				6B0330891D8BF3E200502699 /* HelpViewController.m */,
+				6B03308A1D8BF3E200502699 /* MainViewController.h */,
+				6B03308B1D8BF3E200502699 /* MainViewController.m */,
+				6B1A9FEE1C04FCE800C729CD /* InfoViewController.h */,
+				6B1A9FEF1C04FCE800C729CD /* InfoViewController.m */,
+				6B1A9FF41C04FCE800C729CD /* Assets.xcassets */,
+				6BE2C3FD1D8D88F000C9E488 /* Main.storyboard */,
+				6B2212B51D8C4A9D00663AE0 /* Localizable.strings */,
+				6B1A9FF91C04FCE800C729CD /* Info.plist */,
+				6B1A9FE81C04FCE800C729CD /* Supporting Files */,
+			);
+			path = QuickFillKeyboard;
+			sourceTree = "<group>";
+		};
+		6B1A9FE81C04FCE800C729CD /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				6B1A9FE91C04FCE800C729CD /* main.m */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		6B1AA0011C04FCE800C729CD /* QuickFillKeyboardTests */ = {
+			isa = PBXGroup;
+			children = (
+				6B1AA0021C04FCE800C729CD /* QuickFillKeyboardTests.m */,
+				6B1AA0041C04FCE800C729CD /* Info.plist */,
+			);
+			path = QuickFillKeyboardTests;
+			sourceTree = "<group>";
+		};
+		6B1AA00C1C04FCE800C729CD /* QuickFillKeyboardUITests */ = {
+			isa = PBXGroup;
+			children = (
+				6B1AA00D1C04FCE800C729CD /* QuickFillKeyboardUITests.m */,
+				6B1AA00F1C04FCE800C729CD /* Info.plist */,
+			);
+			path = QuickFillKeyboardUITests;
+			sourceTree = "<group>";
+		};
+		6B1AA0201C04FD0F00C729CD /* QuickFill */ = {
+			isa = PBXGroup;
+			children = (
+				6BC370581C188D98006EB6C7 /* QuickFill.entitlements */,
+				6BC370551C161A79006EB6C7 /* QuickFill.h */,
+				6BE2C3FF1D8D8A4300C9E488 /* QuickFill.xib */,
+				6BC370561C161A79006EB6C7 /* QuickFill.m */,
+				6B1AA0211C04FD0F00C729CD /* KeyboardViewController.h */,
+				6B1AA0221C04FD0F00C729CD /* KeyboardViewController.m */,
+				6B1AA0241C04FD0F00C729CD /* Info.plist */,
+			);
+			path = QuickFill;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		6B1A9FE41C04FCE800C729CD /* QuickFillKeyboard */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6B1AA0121C04FCE800C729CD /* Build configuration list for PBXNativeTarget "QuickFillKeyboard" */;
+			buildPhases = (
+				9351D59177425F82AF42B3A8 /* [CP] Check Pods Manifest.lock */,
+				6B1A9FE11C04FCE800C729CD /* Sources */,
+				6B1A9FE21C04FCE800C729CD /* Frameworks */,
+				6B1A9FE31C04FCE800C729CD /* Resources */,
+				6B1AA02B1C04FD0F00C729CD /* Embed App Extensions */,
+				6DF4295DFFDD001E333109BD /* [CP] Embed Pods Frameworks */,
+				3D9B5D21018D60976B908C40 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6B1AA0261C04FD0F00C729CD /* PBXTargetDependency */,
+			);
+			name = QuickFillKeyboard;
+			productName = QuickFillKeyboard;
+			productReference = 6B1A9FE51C04FCE800C729CD /* QuickFillKeyboard.app */;
+			productType = "com.apple.product-type.application";
+		};
+		6B1A9FFD1C04FCE800C729CD /* QuickFillKeyboardTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6B1AA0151C04FCE800C729CD /* Build configuration list for PBXNativeTarget "QuickFillKeyboardTests" */;
+			buildPhases = (
+				BE4AC834DEB645C45BD0521A /* [CP] Check Pods Manifest.lock */,
+				6B1A9FFA1C04FCE800C729CD /* Sources */,
+				6B1A9FFB1C04FCE800C729CD /* Frameworks */,
+				6B1A9FFC1C04FCE800C729CD /* Resources */,
+				636B76B2B6AAB481D9ED771D /* [CP] Embed Pods Frameworks */,
+				D5EBCB21391049E597456035 /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6B1AA0001C04FCE800C729CD /* PBXTargetDependency */,
+			);
+			name = QuickFillKeyboardTests;
+			productName = QuickFillKeyboardTests;
+			productReference = 6B1A9FFE1C04FCE800C729CD /* QuickFillKeyboardTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		6B1AA0081C04FCE800C729CD /* QuickFillKeyboardUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6B1AA0181C04FCE800C729CD /* Build configuration list for PBXNativeTarget "QuickFillKeyboardUITests" */;
+			buildPhases = (
+				BB82FE71805E0ECDDF8CE5BA /* [CP] Check Pods Manifest.lock */,
+				6B1AA0051C04FCE800C729CD /* Sources */,
+				6B1AA0061C04FCE800C729CD /* Frameworks */,
+				6B1AA0071C04FCE800C729CD /* Resources */,
+				22698537A2CE53DFE2A464BC /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				6B1AA00B1C04FCE800C729CD /* PBXTargetDependency */,
+			);
+			name = QuickFillKeyboardUITests;
+			productName = QuickFillKeyboardUITests;
+			productReference = 6B1AA0091C04FCE800C729CD /* QuickFillKeyboardUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+		6B1AA01E1C04FD0F00C729CD /* QuickFill */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 6B1AA0281C04FD0F00C729CD /* Build configuration list for PBXNativeTarget "QuickFill" */;
+			buildPhases = (
+				4D2A2308C87A66AB45AF57E0 /* [CP] Check Pods Manifest.lock */,
+				6B1AA01B1C04FD0F00C729CD /* Sources */,
+				6B1AA01C1C04FD0F00C729CD /* Frameworks */,
+				6B1AA01D1C04FD0F00C729CD /* Resources */,
+				C148D40FAAD82C69C6518AB8 /* [CP] Embed Pods Frameworks */,
+				41ED160D218A75C62761550B /* [CP] Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = QuickFill;
+			productName = QuickFill;
+			productReference = 6B1AA01F1C04FD0F00C729CD /* QuickFill.appex */;
+			productType = "com.apple.product-type.app-extension";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		6B1A9FDD1C04FCE800C729CD /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0710;
+				ORGANIZATIONNAME = "Cathy Oun";
+				TargetAttributes = {
+					6B1A9FE41C04FCE800C729CD = {
+						CreatedOnToolsVersion = 7.1.1;
+						DevelopmentTeam = 597HR9EHGW;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
+					};
+					6B1A9FFD1C04FCE800C729CD = {
+						CreatedOnToolsVersion = 7.1.1;
+						TestTargetID = 6B1A9FE41C04FCE800C729CD;
+					};
+					6B1AA0081C04FCE800C729CD = {
+						CreatedOnToolsVersion = 7.1.1;
+						TestTargetID = 6B1A9FE41C04FCE800C729CD;
+					};
+					6B1AA01E1C04FD0F00C729CD = {
+						CreatedOnToolsVersion = 7.1.1;
+						DevelopmentTeam = 597HR9EHGW;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 1;
+							};
+						};
+					};
+				};
+			};
+			buildConfigurationList = 6B1A9FE01C04FCE800C729CD /* Build configuration list for PBXProject "QuickFillKeyboard" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+				"zh-Hant",
+			);
+			mainGroup = 6B1A9FDC1C04FCE800C729CD;
+			productRefGroup = 6B1A9FE61C04FCE800C729CD /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				6B1A9FE41C04FCE800C729CD /* QuickFillKeyboard */,
+				6B1A9FFD1C04FCE800C729CD /* QuickFillKeyboardTests */,
+				6B1AA0081C04FCE800C729CD /* QuickFillKeyboardUITests */,
+				6B1AA01E1C04FD0F00C729CD /* QuickFill */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		6B1A9FE31C04FCE800C729CD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6BE2C3FE1D8D88F000C9E488 /* Main.storyboard in Resources */,
+				6B2212B71D8C4A9D00663AE0 /* Localizable.strings in Resources */,
+				6B1A9FF51C04FCE800C729CD /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6B1A9FFC1C04FCE800C729CD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6B1AA0071C04FCE800C729CD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6B1AA01D1C04FD0F00C729CD /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6BE2C4001D8D8A4300C9E488 /* QuickFill.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		22698537A2CE53DFE2A464BC /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-QuickFillKeyboardUITests/Pods-QuickFillKeyboardUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		3D9B5D21018D60976B908C40 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-QuickFillKeyboard/Pods-QuickFillKeyboard-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		41ED160D218A75C62761550B /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-QuickFill/Pods-QuickFill-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4D2A2308C87A66AB45AF57E0 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		636B76B2B6AAB481D9ED771D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-QuickFillKeyboardTests/Pods-QuickFillKeyboardTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		6DF4295DFFDD001E333109BD /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-QuickFillKeyboard/Pods-QuickFillKeyboard-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		9351D59177425F82AF42B3A8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		BB82FE71805E0ECDDF8CE5BA /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		BE4AC834DEB645C45BD0521A /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		C148D40FAAD82C69C6518AB8 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-QuickFill/Pods-QuickFill-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		D5EBCB21391049E597456035 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-QuickFillKeyboardTests/Pods-QuickFillKeyboardTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		6B1A9FE11C04FCE800C729CD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6B1A9FF01C04FCE800C729CD /* InfoViewController.m in Sources */,
+				6B1A9FED1C04FCE800C729CD /* AppDelegate.m in Sources */,
+				6B1A9FEA1C04FCE800C729CD /* main.m in Sources */,
+				6BE2C4061D8D8FE300C9E488 /* UIColor+Extension.m in Sources */,
+				6B03308D1D8BF3E200502699 /* MainViewController.m in Sources */,
+				6B03308C1D8BF3E200502699 /* HelpViewController.m in Sources */,
+				6B0330901D8BF44700502699 /* Constants.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6B1A9FFA1C04FCE800C729CD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6B1AA0031C04FCE800C729CD /* QuickFillKeyboardTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6B1AA0051C04FCE800C729CD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6B1AA00E1C04FCE800C729CD /* QuickFillKeyboardUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		6B1AA01B1C04FD0F00C729CD /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6BC370571C161A79006EB6C7 /* QuickFill.m in Sources */,
+				6B1AA0231C04FD0F00C729CD /* KeyboardViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		6B1AA0001C04FCE800C729CD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6B1A9FE41C04FCE800C729CD /* QuickFillKeyboard */;
+			targetProxy = 6B1A9FFF1C04FCE800C729CD /* PBXContainerItemProxy */;
+		};
+		6B1AA00B1C04FCE800C729CD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6B1A9FE41C04FCE800C729CD /* QuickFillKeyboard */;
+			targetProxy = 6B1AA00A1C04FCE800C729CD /* PBXContainerItemProxy */;
+		};
+		6B1AA0261C04FD0F00C729CD /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 6B1AA01E1C04FD0F00C729CD /* QuickFill */;
+			targetProxy = 6B1AA0251C04FD0F00C729CD /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		6B2212B51D8C4A9D00663AE0 /* Localizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				6B2212B61D8C4A9D00663AE0 /* zh-Hant */,
+				6B2212B81D8C4AA600663AE0 /* en */,
+			);
+			name = Localizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		6B1AA0101C04FCE800C729CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		6B1AA0111C04FCE800C729CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.1;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		6B1AA0131C04FCE800C729CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 56812736307C5D0B5322059D /* Pods-QuickFillKeyboard.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = QuickFillKeyboard/QuickFillKeyboard.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				INFOPLIST_FILE = QuickFillKeyboard/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.cathyoun.QuickFillKeyboard;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+			};
+			name = Debug;
+		};
+		6B1AA0141C04FCE800C729CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 96C4E11BC02BF83236DA3C6F /* Pods-QuickFillKeyboard.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = QuickFillKeyboard/QuickFillKeyboard.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				INFOPLIST_FILE = QuickFillKeyboard/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.cathyoun.QuickFillKeyboard;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+			};
+			name = Release;
+		};
+		6B1AA0161C04FCE800C729CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 502F37706B3C47A10FC47FD5 /* Pods-QuickFillKeyboardTests.debug.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = QuickFillKeyboardTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.cathyoun.QuickFillKeyboardTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/QuickFillKeyboard.app/QuickFillKeyboard";
+			};
+			name = Debug;
+		};
+		6B1AA0171C04FCE800C729CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 438B0E0B01F7E5318BF67E74 /* Pods-QuickFillKeyboardTests.release.xcconfig */;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = QuickFillKeyboardTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.cathyoun.QuickFillKeyboardTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/QuickFillKeyboard.app/QuickFillKeyboard";
+			};
+			name = Release;
+		};
+		6B1AA0191C04FCE800C729CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E091C4F7B5DA73660D4E2A53 /* Pods-QuickFillKeyboardUITests.debug.xcconfig */;
+			buildSettings = {
+				INFOPLIST_FILE = QuickFillKeyboardUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.cathyoun.QuickFillKeyboardUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = QuickFillKeyboard;
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		6B1AA01A1C04FCE800C729CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5613C90C72207545C6DB3864 /* Pods-QuickFillKeyboardUITests.release.xcconfig */;
+			buildSettings = {
+				INFOPLIST_FILE = QuickFillKeyboardUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.cathyoun.QuickFillKeyboardUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = QuickFillKeyboard;
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
+		6B1AA0291C04FD0F00C729CD /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9CBFF22F382284E6856D7C60 /* Pods-QuickFill.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = QuickFill/QuickFill.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				INFOPLIST_FILE = QuickFill/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.cathyoun.QuickFillKeyboard.QuickFill;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		6B1AA02A1C04FD0F00C729CD /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A3B0FE49C239881B50E287A6 /* Pods-QuickFill.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_ENTITLEMENTS = QuickFill/QuickFill.entitlements;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				INFOPLIST_FILE = QuickFill/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.cathyoun.QuickFillKeyboard.QuickFill;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		6B1A9FE01C04FCE800C729CD /* Build configuration list for PBXProject "QuickFillKeyboard" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6B1AA0101C04FCE800C729CD /* Debug */,
+				6B1AA0111C04FCE800C729CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6B1AA0121C04FCE800C729CD /* Build configuration list for PBXNativeTarget "QuickFillKeyboard" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6B1AA0131C04FCE800C729CD /* Debug */,
+				6B1AA0141C04FCE800C729CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6B1AA0151C04FCE800C729CD /* Build configuration list for PBXNativeTarget "QuickFillKeyboardTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6B1AA0161C04FCE800C729CD /* Debug */,
+				6B1AA0171C04FCE800C729CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6B1AA0181C04FCE800C729CD /* Build configuration list for PBXNativeTarget "QuickFillKeyboardUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6B1AA0191C04FCE800C729CD /* Debug */,
+				6B1AA01A1C04FCE800C729CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		6B1AA0281C04FD0F00C729CD /* Build configuration list for PBXNativeTarget "QuickFill" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				6B1AA0291C04FD0F00C729CD /* Debug */,
+				6B1AA02A1C04FD0F00C729CD /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 6B1A9FDD1C04FCE800C729CD /* Project object */;
+}

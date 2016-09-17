@@ -1,0 +1,59 @@
+/* 
+  Localizable.strings
+  QuickFillKeyboard
+
+  Created by Cathy Oun on 2/3/16.
+  Copyright © 2016 Cathy Oun. All rights reserved.
+*/
+"firstName" = "名字";
+"lastName" = "姓氏";
+"email" = "信箱";
+"address" = "地址";
+"phoneNum" = "電話";
+"city" = "城市";
+"state" = "區";
+"zip" = "郵遞區號";
+"space" = "空白";
+"return" = "確認";
+"delete" = "刪除";
+"save" = "儲存";
+"clear" = "清除全部";
+"infoTitle" = "填寫你的鍵盤內容";
+"optional" = "自選鍵";
+"fill_your_info" = "填寫你的資料";
+"how_to_setup" = "如何設定鍵盤";
+"rate_review" = "評分";
+"QuickFillKeyboard" = "快克輸入鍵盤";
+"alert.updated_title" = "鍵盤已更新!";
+"alert.updated_message" = "快克輸入鍵盤並不會讀取使用者的資料。請放心使用。";
+"okay" = "好";
+"yes" = "確認";
+"cancel" = "取消";
+"alert.clear_title" = "確定清除全部?";
+"alert.clear_message" = "選擇確認鍵清除所有填寫的資料";
+"help.title" = "設定你的鍵盤";
+
+//"firstName"= "Nombre";
+//"lastName" = "Apellido";
+//"email" = "Correo electrónico";
+//"address" = "Dirección";
+//"phoneNum" = "Número de teléfono";
+//"city" = "Ciudad";
+//"state" = "Estado";
+//"zip" = "Código postal";
+//"save" = "儲存";
+//"clear" = "清除";
+//
+//
+//
+////"save" = "Guardar";
+////"clear" = "Limpiar";
+//
+//"firstName" = "이름";
+//"lastName" = "성";
+//"email" = "이메일";
+//"address" = "주소";
+//"phoneNum" = "전화번호/휴대폰 번호";
+//"city" = "시";
+//"state" = "구";
+//"zip" = "우편번호";

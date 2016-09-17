@@ -1,0 +1,66 @@
+
+/* Class = "UIBarButtonItem"; title = " "; ObjectID = "0TA-zG-I7H"; */
+"0TA-zG-I7H.title" = " ";
+
+/* Class = "UINavigationItem"; title = "Quick Fill Keyboard"; ObjectID = "3bJ-I3-YVh"; */
+"3bJ-I3-YVh.title" = "Quick Fill Keyboard";
+
+/* Class = "UILabel"; text = "State"; ObjectID = "5JA-Li-IYU"; */
+"5JA-Li-IYU.text" = "State";
+
+/* Class = "UIButton"; normalTitle = "Help"; ObjectID = "7B5-sT-Asi"; */
+"7B5-sT-Asi.normalTitle" = "Help";
+
+/* Class = "UILabel"; text = "Fill Your Information"; ObjectID = "7kg-Ht-nPI"; */
+"7kg-Ht-nPI.text" = "Fill Your Information";
+
+/* Class = "UILabel"; text = "Zip"; ObjectID = "A5v-nS-ybl"; */
+"A5v-nS-ybl.text" = "Zip";
+
+/* Class = "UIBarButtonItem"; title = "Save"; ObjectID = "ANK-my-lXI"; */
+"ANK-my-lXI.title" = "Save";
+
+/* Class = "UILabel"; text = "Email"; ObjectID = "AUc-P4-fxI"; */
+"AUc-P4-fxI.text" = "Email";
+
+/* Class = "UINavigationItem"; title = "Fill Out Your Keyboard Content"; ObjectID = "Dbw-c2-oXN"; */
+"Dbw-c2-oXN.title" = "Fill Out Your Keyboard Content";
+
+/* Class = "UILabel"; text = "Last Name"; ObjectID = "DfY-au-czs"; */
+"DfY-au-czs.text" = "Last Name";
+
+/* Class = "UINavigationItem"; title = "How To Set Up My Keyboard?"; ObjectID = "Whq-25-fBF"; */
+"Whq-25-fBF.title" = "How To Set Up My Keyboard?";
+
+/* Class = "UILabel"; text = "First Name"; ObjectID = "bWv-rY-cVU"; */
+"bWv-rY-cVU.text" = "First Name";
+
+/* Class = "UITextField"; placeholder = "Option"; ObjectID = "cK7-gM-BCv"; */
+"cK7-gM-BCv.placeholder" = "Option";
+
+/* Class = "UILabel"; text = "City"; ObjectID = "cuR-Fu-089"; */
+"cuR-Fu-089.text" = "City";
+
+/* Class = "UILabel"; text = "Address"; ObjectID = "eXw-9t-iwy"; */
+"eXw-9t-iwy.text" = "Address";
+
+/* Class = "UILabel"; text = "How to Setup"; ObjectID = "gTM-Wg-azw"; */
+"gTM-Wg-azw.text" = "How to Setup";
+
+/* Class = "UINavigationItem"; title = "Language"; ObjectID = "i3o-vo-hVn"; */
+"i3o-vo-hVn.title" = "Language";
+
+/* Class = "UILabel"; text = "Rate and Review"; ObjectID = "ksN-pq-Rhm"; */
+"ksN-pq-Rhm.text" = "Rate and Review";
+
+/* Class = "UIButton"; normalTitle = "Rate Me"; ObjectID = "mBa-yF-XFV"; */
+"mBa-yF-XFV.normalTitle" = "Rate Me";
+
+/* Class = "UIButton"; normalTitle = "Different Language?"; ObjectID = "o9J-VO-k62"; */
+"o9J-VO-k62.normalTitle" = "Different Language?";
+
+/* Class = "UILabel"; text = "Phone"; ObjectID = "uhG-eF-ZNY"; */
+"uhG-eF-ZNY.text" = "Phone";
+
+/* Class = "UIBarButtonItem"; title = "Clear All"; ObjectID = "w56-6w-T7L"; */
+"w56-6w-T7L.title" = "Clear All";

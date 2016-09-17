@@ -1,0 +1,31 @@
+/* 
+  Localizable.strings
+  QuickFillKeyboard
+
+  Created by Cathy Oun on 2/3/16.
+  Copyright © 2016 Cathy Oun. All rights reserved.
+*/
+"firstName"= "Nombre";
+"lastName" = "Apellido";
+"email" = "Correo electrónico";
+"address" = "Dirección";
+"phoneNum" = "Número de teléfono";
+"city" = "Ciudad";
+"state" = "Estado";
+"zip" = "Código postal";
+"save" = "儲存";
+"clear" = "清除";
+
+
+
+//"save" = "Guardar";
+//"clear" = "Limpiar";
+
+"firstName" = "이름";
+"lastName" = "성";
+"email" = "이메일";
+"address" = "주소";
+"phoneNum" = "전화번호/휴대폰 번호";
+"city" = "시";
+"state" = "구";
+"zip" = "우편번호";

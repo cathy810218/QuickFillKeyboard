@@ -1,0 +1,34 @@
+/* 
+  Localization.strings
+  QuickFillKeyboard
+
+  Created by Cathy Oun on 9/14/16.
+  Copyright © 2016 Cathy Oun. All rights reserved.
+*/
+"firstName" = "First Name";
+"lastName" = "Last Name";
+"email" = "Email";
+"address" = "Address";
+"phoneNum" = "Phone";
+"city" = "City";
+"state" = "State";
+"zip" = "Zip";
+"space" = "Space";
+"return" = "Return";
+"delete" = "Delete";
+"save" = "Save";
+"clear" = "Clear All";
+"optional" = "Optional";
+"infoTitle" = "Fill Your Information";
+"fill_your_info" = "Fill Your Information";
+"how_to_setup" = "How to Setup";
+"rate_review" = "Rate and Review";
+"QuickFillKeyboard" = "Quick Fill Keyboard";
+"alert.updated_title" = "Your keyboard is updated!";
+"alert.updated_message" = "QuickFillKeyboard will NOT collect users' information.";
+"okay" = "Okay";
+"yes" = "Okay";
+"alert.clear_title" = "Clear All?";
+"alert.clear_message" = "Click Okay to clear all information";
+"cancel" = "Cancel";
+"help.title" = "Setup your keyboard";

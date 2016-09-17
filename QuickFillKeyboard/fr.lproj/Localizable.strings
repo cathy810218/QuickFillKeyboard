@@ -1,0 +1,18 @@
+/* 
+  Localizable.strings
+  QuickFillKeyboard
+
+  Created by Cathy Oun on 2/3/16.
+  Copyright © 2016 Cathy Oun. All rights reserved.
+*/
+"firstName" = "名字";
+"lastName" = "姓氏";
+"email" = "電子郵件";
+"address" = "地址";
+"phoneNum" = "電話";
+"city" = "城市";
+"state" = "行政區";
+"zip" = "郵遞區號";
+"save" = "儲存";
+"clear" = "清除";
+"FillOutYourKeyboard" = "填寫你的鍵盤資料";
