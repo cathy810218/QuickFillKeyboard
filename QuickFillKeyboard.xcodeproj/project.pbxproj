@@ -21,6 +21,7 @@
 		6B1AA0231C04FD0F00C729CD /* KeyboardViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B1AA0221C04FD0F00C729CD /* KeyboardViewController.m */; };
 		6B1AA0271C04FD0F00C729CD /* QuickFill.appex in Embed App Extensions */ = {isa = PBXBuildFile; fileRef = 6B1AA01F1C04FD0F00C729CD /* QuickFill.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		6B2212B71D8C4A9D00663AE0 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6B2212B51D8C4A9D00663AE0 /* Localizable.strings */; };
+		6BAC02091D8DDBC600D82DAE /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6B2212B51D8C4A9D00663AE0 /* Localizable.strings */; };
 		6BC370571C161A79006EB6C7 /* QuickFill.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC370561C161A79006EB6C7 /* QuickFill.m */; };
 		6BE2C3FE1D8D88F000C9E488 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6BE2C3FD1D8D88F000C9E488 /* Main.storyboard */; };
 		6BE2C4001D8D8A4300C9E488 /* QuickFill.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6BE2C3FF1D8D8A4300C9E488 /* QuickFill.xib */; };
@@ -442,6 +443,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6BE2C4001D8D8A4300C9E488 /* QuickFill.xib in Resources */,
+				6BAC02091D8DDBC600D82DAE /* Localizable.strings in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
