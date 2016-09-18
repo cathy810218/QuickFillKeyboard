@@ -44,7 +44,7 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
 
-    self.myKeyboard = [[QuickFill alloc]init];
+    self.myKeyboard = [[QuickFill alloc] initWithFrame:CGRectMake(0, 0, 350, 220)];
     self.myKeyboard = [[[NSBundle mainBundle] loadNibNamed:@"QuickFill" owner:self options:nil] objectAtIndex:0];
     self.inputView = (UIInputView *)self.myKeyboard;
     
@@ -79,7 +79,6 @@
 //    NSUserDefaults *shared = [[NSUserDefaults alloc] initWithSuiteName:@"group.com.cathyoun.QuickFillKeyboard"];
 //    id userInfo = [shared valueForKey:@"userInfo"];
 //    NSLog(@"%@",userInfo[@"firstName"]);
-    
 }
 
 - (void)textWillChange:(id<UITextInput>)textInput {

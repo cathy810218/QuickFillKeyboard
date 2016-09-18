@@ -7,7 +7,6 @@ target 'QuickFill' do
 
   # Pods for QuickFill
 
-  pod 'Masonry'
   target 'QuickFillKeyboardTests' do
     inherit! :search_paths
     # Pods for testing
@@ -26,7 +25,6 @@ target 'QuickFillKeyboard' do
 
   # Pods for QuickFillKeyboard
 
-  pod 'Masonry'
   pod 'LaunchKit'
   pod 'Appirater'
   

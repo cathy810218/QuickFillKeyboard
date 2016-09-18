@@ -10,7 +10,6 @@
 #import "LaunchKit.h"
 #import "HelpViewController.h"
 #import "Constants.h"
-#import <Masonry.h>
 //#define APP_STORE_ID 1067669330
 @interface MainViewController ()
 

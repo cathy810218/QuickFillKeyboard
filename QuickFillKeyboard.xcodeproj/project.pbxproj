@@ -23,7 +23,8 @@
 		6B2212B71D8C4A9D00663AE0 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6B2212B51D8C4A9D00663AE0 /* Localizable.strings */; };
 		6BAC02091D8DDBC600D82DAE /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6B2212B51D8C4A9D00663AE0 /* Localizable.strings */; };
 		6BAC020B1D8DDCF800D82DAE /* gkey.png in Resources */ = {isa = PBXBuildFile; fileRef = 6BAC020A1D8DDCF800D82DAE /* gkey.png */; };
-		6BAC020D1D8EA8AA00D82DAE /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6BAC020C1D8EA8AA00D82DAE /* Launch Screen.storyboard */; };
+		6BAC020D1D8EA8AA00D82DAE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6BAC020C1D8EA8AA00D82DAE /* LaunchScreen.storyboard */; };
+		6BAC020E1D8EB65D00D82DAE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6B1A9FF41C04FCE800C729CD /* Assets.xcassets */; };
 		6BC370571C161A79006EB6C7 /* QuickFill.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC370561C161A79006EB6C7 /* QuickFill.m */; };
 		6BE2C3FE1D8D88F000C9E488 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6BE2C3FD1D8D88F000C9E488 /* Main.storyboard */; };
 		6BE2C4001D8D8A4300C9E488 /* QuickFill.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6BE2C3FF1D8D8A4300C9E488 /* QuickFill.xib */; };
@@ -104,7 +105,7 @@
 		6B2212B61D8C4A9D00663AE0 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		6B2212B81D8C4AA600663AE0 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		6BAC020A1D8DDCF800D82DAE /* gkey.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gkey.png; sourceTree = "<group>"; };
-		6BAC020C1D8EA8AA00D82DAE /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
+		6BAC020C1D8EA8AA00D82DAE /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		6BC370551C161A79006EB6C7 /* QuickFill.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuickFill.h; sourceTree = "<group>"; };
 		6BC370561C161A79006EB6C7 /* QuickFill.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuickFill.m; sourceTree = "<group>"; };
 		6BC370581C188D98006EB6C7 /* QuickFill.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = QuickFill.entitlements; sourceTree = "<group>"; };
@@ -225,7 +226,7 @@
 				6B1A9FEF1C04FCE800C729CD /* InfoViewController.m */,
 				6B1A9FF41C04FCE800C729CD /* Assets.xcassets */,
 				6BE2C3FD1D8D88F000C9E488 /* Main.storyboard */,
-				6BAC020C1D8EA8AA00D82DAE /* Launch Screen.storyboard */,
+				6BAC020C1D8EA8AA00D82DAE /* LaunchScreen.storyboard */,
 				6B2212B51D8C4A9D00663AE0 /* Localizable.strings */,
 				6B1A9FF91C04FCE800C729CD /* Info.plist */,
 				6B1A9FE81C04FCE800C729CD /* Supporting Files */,
@@ -350,6 +351,7 @@
 				6B1AA01D1C04FD0F00C729CD /* Resources */,
 				C148D40FAAD82C69C6518AB8 /* [CP] Embed Pods Frameworks */,
 				41ED160D218A75C62761550B /* [CP] Copy Pods Resources */,
+				6BAC020F1D8EC10A00D82DAE /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -366,7 +368,7 @@
 		6B1A9FDD1C04FCE800C729CD /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0710;
+				LastUpgradeCheck = 0800;
 				ORGANIZATIONNAME = "Cathy Oun";
 				TargetAttributes = {
 					6B1A9FE41C04FCE800C729CD = {
@@ -426,7 +428,7 @@
 			files = (
 				6BE2C3FE1D8D88F000C9E488 /* Main.storyboard in Resources */,
 				6B2212B71D8C4A9D00663AE0 /* Localizable.strings in Resources */,
-				6BAC020D1D8EA8AA00D82DAE /* Launch Screen.storyboard in Resources */,
+				6BAC020D1D8EA8AA00D82DAE /* LaunchScreen.storyboard in Resources */,
 				6B1A9FF51C04FCE800C729CD /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -451,6 +453,7 @@
 			files = (
 				6BE2C4001D8D8A4300C9E488 /* QuickFill.xib in Resources */,
 				6BAC02091D8DDBC600D82DAE /* Localizable.strings in Resources */,
+				6BAC020E1D8EB65D00D82DAE /* Assets.xcassets in Resources */,
 				6BAC020B1D8DDCF800D82DAE /* gkey.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -532,6 +535,19 @@
 			shellPath = /bin/sh;
 			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-QuickFillKeyboardTests/Pods-QuickFillKeyboardTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
+		};
+		6BAC020F1D8EC10A00D82DAE /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "cd \"${CONFIGURATION_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/\"\nif [[ -d \"Frameworks\" ]]; then\nrm -fr Frameworks\nfi";
 		};
 		6DF4295DFFDD001E333109BD /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -701,6 +717,7 @@
 		6B1AA0101C04FCE800C729CD /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
@@ -712,8 +729,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -746,6 +765,7 @@
 		6B1AA0111C04FCE800C729CD /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
 				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
@@ -757,8 +777,10 @@
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_EMPTY_BODY = YES;
 				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -786,6 +808,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 56812736307C5D0B5322059D /* Pods-QuickFillKeyboard.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = QuickFillKeyboard/QuickFillKeyboard.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -803,6 +826,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 96C4E11BC02BF83236DA3C6F /* Pods-QuickFillKeyboard.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = QuickFillKeyboard/QuickFillKeyboard.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
@@ -872,6 +896,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 9CBFF22F382284E6856D7C60 /* Pods-QuickFill.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CODE_SIGN_ENTITLEMENTS = QuickFill/QuickFill.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -888,6 +913,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = A3B0FE49C239881B50E287A6 /* Pods-QuickFill.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CODE_SIGN_ENTITLEMENTS = QuickFill/QuickFill.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
