@@ -72,14 +72,13 @@
     [self addGestureToKeyboard];
     
     UIImage *globalImg = [UIImage imageNamed:@"gkey.png"];
-//    [self.myKeyboard.nextKeyboard.imageView setImage:globalImg];
     [self.myKeyboard.nextKeyboard setImage:globalImg forState:UIControlStateNormal];
     self.myKeyboard.nextKeyboard.imageView.contentMode = UIViewContentModeScaleAspectFit;
     [self.inputView addSubview:self.myKeyboard.nextKeyboard];
     
-    NSUserDefaults *shared = [[NSUserDefaults alloc] initWithSuiteName:@"group.com.cathyoun.QuickFillKeyboard"];
-    id userInfo = [shared valueForKey:@"userInfo"];
-    NSLog(@"%@",userInfo[@"firstName"]);
+//    NSUserDefaults *shared = [[NSUserDefaults alloc] initWithSuiteName:@"group.com.cathyoun.QuickFillKeyboard"];
+//    id userInfo = [shared valueForKey:@"userInfo"];
+//    NSLog(@"%@",userInfo[@"firstName"]);
     
 }
 
