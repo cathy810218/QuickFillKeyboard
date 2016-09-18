@@ -25,6 +25,10 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+//    NSNotificationCenter *center = [NSNotificationCenter defaultCenter];
+//    [center addObserver:self selector:@selector(keyboardOnScreen:) name:UIKeyboardDidShowNotification object:nil];
+    
     self.title = NSLocalizedString(@"QuickFillKeyboard", nil);
     self.view.backgroundColor = [UIColor whiteColor];
     [self.navigationController.navigationBar setTintColor: [UIColor whiteColor]];
@@ -36,6 +40,18 @@
     [self.view addSubview: self.setupLabel];
     [self.view addSubview: self.rateLabel];
 }
+
+
+//-(void)keyboardOnScreen:(NSNotification *)notification
+//{
+//    NSDictionary *info  = notification.userInfo;
+//    NSValue      *value = info[UIKeyboardFrameEndUserInfoKey];
+//    
+//    CGRect rawFrame      = [value CGRectValue];
+//    CGRect keyboardFrame = [self.view convertRect:rawFrame fromView:nil];
+//    
+//    NSLog(@"keyboardFrame: %@", NSStringFromCGRect(keyboardFrame));
+//}
 
 - (IBAction)helpButtonPressed:(id)sender {
     HelpViewController *helpVC = [[HelpViewController alloc]init];

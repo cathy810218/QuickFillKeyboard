@@ -10,6 +10,7 @@
 #import "QuickFill.h"
 #import "InfoViewController.h"
 #import <QuartzCore/QuartzCore.h>
+
 @interface KeyboardViewController ()
 @property (nonatomic, strong) QuickFill *myKeyboard;
 @property (nonatomic, strong) UILongPressGestureRecognizer *lpgr;
@@ -19,11 +20,6 @@
 @end
 
 @implementation KeyboardViewController
-
-- (void)updateViewConstraints {
-    [super updateViewConstraints];
-    // Add custom view sizing constraints here
-}
 
 - (void)setKeyboardKey:(UIButton *)btn withKey:(NSString *)name{
     btn.layer.cornerRadius = 5.0;
@@ -47,11 +43,11 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+
     self.myKeyboard = [[QuickFill alloc]init];
     self.myKeyboard = [[[NSBundle mainBundle] loadNibNamed:@"QuickFill" owner:self options:nil] objectAtIndex:0];
     self.inputView = (UIInputView *)self.myKeyboard;
-
-    self.myKeyboard.bounds = CGRectMake(0, 0, 350, 200);
+    
     self.myKeyboard.nextKeyboard.layer.cornerRadius = 5.0;
     self.myKeyboard.nextKeyboard.layer.masksToBounds = false;
     self.myKeyboard.nextKeyboard.layer.shadowOpacity = 1.0;
@@ -76,13 +72,14 @@
     [self addGestureToKeyboard];
     
     UIImage *globalImg = [UIImage imageNamed:@"gkey.png"];
+//    [self.myKeyboard.nextKeyboard.imageView setImage:globalImg];
     [self.myKeyboard.nextKeyboard setImage:globalImg forState:UIControlStateNormal];
+    self.myKeyboard.nextKeyboard.imageView.contentMode = UIViewContentModeScaleAspectFit;
     [self.inputView addSubview:self.myKeyboard.nextKeyboard];
     
     NSUserDefaults *shared = [[NSUserDefaults alloc] initWithSuiteName:@"group.com.cathyoun.QuickFillKeyboard"];
     id userInfo = [shared valueForKey:@"userInfo"];
     NSLog(@"%@",userInfo[@"firstName"]);
-    
     
 }
 
@@ -99,7 +96,6 @@
     } else {
         textColor = [UIColor blackColor];
     }
-    //  [self.nextKeyboardButton setTitleColor:textColor forState:UIControlStateNormal];
 }
 
 #pragma Mark Keyboards
