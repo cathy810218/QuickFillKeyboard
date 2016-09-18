@@ -118,8 +118,7 @@
     self.state.text = currUserInfo[@"state"];
     self.zip.text = currUserInfo[@"zip"];
     self.phoneNum.text = currUserInfo[@"phoneNum"];
-    
-    
+        
 }
 
 
@@ -213,10 +212,12 @@
 }
 
 -(void)textFieldDidBeginEditing:(UITextField *)textField{
-    if (textField == self.city || textField == self.phoneNum || textField == self.state || textField == self.zip || textField == self.optionKeyTitle || textField == self.optionContent) {
-        
-        // Control for Scroll position
+    if (textField == self.address) {
         [self.scrollView setContentOffset:CGPointMake(0.0, self.view.frame.size.height/4) animated:YES];
+    } else if (textField == self.city || textField == self.zip || textField == self.state) {
+        [self.scrollView setContentOffset:CGPointMake(0.0, self.view.frame.size.height/3) animated:YES];
+    } else if (textField == self.zip || textField == self.optionKeyTitle || textField == self.optionContent) {
+        [self.scrollView setContentOffset:CGPointMake(0.0, self.view.frame.size.height/2) animated:YES];
     }
 }
 

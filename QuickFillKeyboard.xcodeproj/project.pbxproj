@@ -23,6 +23,7 @@
 		6B2212B71D8C4A9D00663AE0 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6B2212B51D8C4A9D00663AE0 /* Localizable.strings */; };
 		6BAC02091D8DDBC600D82DAE /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6B2212B51D8C4A9D00663AE0 /* Localizable.strings */; };
 		6BAC020B1D8DDCF800D82DAE /* gkey.png in Resources */ = {isa = PBXBuildFile; fileRef = 6BAC020A1D8DDCF800D82DAE /* gkey.png */; };
+		6BAC020D1D8EA8AA00D82DAE /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6BAC020C1D8EA8AA00D82DAE /* Launch Screen.storyboard */; };
 		6BC370571C161A79006EB6C7 /* QuickFill.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC370561C161A79006EB6C7 /* QuickFill.m */; };
 		6BE2C3FE1D8D88F000C9E488 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6BE2C3FD1D8D88F000C9E488 /* Main.storyboard */; };
 		6BE2C4001D8D8A4300C9E488 /* QuickFill.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6BE2C3FF1D8D8A4300C9E488 /* QuickFill.xib */; };
@@ -103,6 +104,7 @@
 		6B2212B61D8C4A9D00663AE0 /* zh-Hant */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hant"; path = "zh-Hant.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		6B2212B81D8C4AA600663AE0 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		6BAC020A1D8DDCF800D82DAE /* gkey.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gkey.png; sourceTree = "<group>"; };
+		6BAC020C1D8EA8AA00D82DAE /* Launch Screen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		6BC370551C161A79006EB6C7 /* QuickFill.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QuickFill.h; sourceTree = "<group>"; };
 		6BC370561C161A79006EB6C7 /* QuickFill.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = QuickFill.m; sourceTree = "<group>"; };
 		6BC370581C188D98006EB6C7 /* QuickFill.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = QuickFill.entitlements; sourceTree = "<group>"; };
@@ -223,6 +225,7 @@
 				6B1A9FEF1C04FCE800C729CD /* InfoViewController.m */,
 				6B1A9FF41C04FCE800C729CD /* Assets.xcassets */,
 				6BE2C3FD1D8D88F000C9E488 /* Main.storyboard */,
+				6BAC020C1D8EA8AA00D82DAE /* Launch Screen.storyboard */,
 				6B2212B51D8C4A9D00663AE0 /* Localizable.strings */,
 				6B1A9FF91C04FCE800C729CD /* Info.plist */,
 				6B1A9FE81C04FCE800C729CD /* Supporting Files */,
@@ -423,6 +426,7 @@
 			files = (
 				6BE2C3FE1D8D88F000C9E488 /* Main.storyboard in Resources */,
 				6B2212B71D8C4A9D00663AE0 /* Localizable.strings in Resources */,
+				6BAC020D1D8EA8AA00D82DAE /* Launch Screen.storyboard in Resources */,
 				6B1A9FF51C04FCE800C729CD /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
