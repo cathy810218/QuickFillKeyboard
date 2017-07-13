@@ -8,8 +8,7 @@
 
 #import "InfoViewController.h"
 #import "UIColor+Extension.h"
-@interface InfoViewController () <UITextFieldDelegate, UIGestureRecognizerDelegate,
-                                UIScrollViewDelegate>
+@interface InfoViewController () <UITextFieldDelegate, UIGestureRecognizerDelegate, UIScrollViewDelegate>
 
 @property (strong, nonatomic) IBOutlet UIScrollView *scrollView;
 @property (weak, nonatomic) IBOutlet UIView *contentView;
@@ -17,19 +16,17 @@
 
 @property (nonatomic, strong) UITapGestureRecognizer *scrollGestureRecognizer;
 
+@property (strong, nonatomic) IBOutlet UITextField *firstNameTextField;
+@property (strong, nonatomic) IBOutlet UITextField *lastNameTextField;
+@property (strong, nonatomic) IBOutlet UITextField *emailTextField;
+@property (strong, nonatomic) IBOutlet UITextField *addressTextField;
+@property (strong, nonatomic) IBOutlet UITextField *cityTextField;
+@property (strong, nonatomic) IBOutlet UITextField *stateTextField;
+@property (strong, nonatomic) IBOutlet UITextField *zipTextField;
+@property (strong, nonatomic) IBOutlet UITextField *phoneNumTextField;
+@property (weak, nonatomic) IBOutlet UITextField *optionKeyTitleTextField;
+@property (weak, nonatomic) IBOutlet UITextField *optionContentTextField;
 
-@property (strong, nonatomic) IBOutlet UITextField *firstName;
-@property (strong, nonatomic) IBOutlet UITextField *lastName;
-@property (strong, nonatomic) IBOutlet UITextField *email;
-@property (strong, nonatomic) IBOutlet UITextField *address;
-@property (strong, nonatomic) IBOutlet UITextField *city;
-@property (strong, nonatomic) IBOutlet UITextField *state;
-@property (strong, nonatomic) IBOutlet UITextField *zip;
-@property (strong, nonatomic) IBOutlet UITextField *phoneNum;
-@property (weak, nonatomic) IBOutlet UITextField *optionKeyTitle;
-@property (weak, nonatomic) IBOutlet UITextField *optionContent;
-
-// label
 @property (weak, nonatomic) IBOutlet UILabel *firstNameLabel;
 @property (weak, nonatomic) IBOutlet UILabel *lastNameLabel;
 @property (weak, nonatomic) IBOutlet UILabel *emailLabel;
@@ -51,33 +48,16 @@
     
     self.title = NSLocalizedString(@"infoTitle", nil);
     
-    self.firstName.delegate = self;
-    self.lastName.delegate = self;
-    self.email.delegate = self;
-    self.address.delegate = self;
-    self.optionContent.delegate = self;
-    self.optionKeyTitle.delegate = self;
-    self.city.delegate = self;
-    self.state.delegate = self;
-    self.zip.delegate = self;
-    self.phoneNum.delegate = self;
-    self.scrollView.delegate = self;
-    self.scrollGestureRecognizer.delegate = self;
-    self.scrollGestureRecognizer = [[UITapGestureRecognizer alloc]initWithTarget:self action:@selector(hideKeyboardWithTouch:)];
-    [self.scrollView addGestureRecognizer:self.scrollGestureRecognizer];
-    [self.scrollView setContentSize:self.contentView.frame.size];
-    // Do any additional setup after loading the view, typically from a nib
-    
-    [self updateBorderColorForTextfield:self.firstName];
-    [self updateBorderColorForTextfield:self.lastName];
-    [self updateBorderColorForTextfield:self.email];
-    [self updateBorderColorForTextfield:self.address];
-    [self updateBorderColorForTextfield:self.optionContent];
-    [self updateBorderColorForTextfield:self.optionKeyTitle];
-    [self updateBorderColorForTextfield:self.city];
-    [self updateBorderColorForTextfield:self.state];
-    [self updateBorderColorForTextfield:self.zip];
-    [self updateBorderColorForTextfield:self.phoneNum];
+    [self setupTextField:self.firstNameTextField withTag:0];
+    [self setupTextField:self.lastNameTextField withTag:1];
+    [self setupTextField:self.emailTextField withTag:2];
+    [self setupTextField:self.addressTextField withTag:3];
+    [self setupTextField:self.cityTextField withTag:4];
+    [self setupTextField:self.stateTextField withTag:5];
+    [self setupTextField:self.zipTextField withTag:6];
+    [self setupTextField:self.phoneNumTextField withTag:7];
+    [self setupTextField:self.optionKeyTitleTextField withTag:8];
+    [self setupTextField:self.optionContentTextField withTag:9];
     
     self.firstNameLabel.text = [NSString stringWithFormat:NSLocalizedString(@"firstName", nil)];
     self.lastNameLabel.text = [NSString stringWithFormat:NSLocalizedString(@"lastName", nil)];
@@ -87,12 +67,24 @@
     self.stateLabel.text = [NSString stringWithFormat:NSLocalizedString(@"state", nil)];
     self.zipLabel.text = [NSString stringWithFormat:NSLocalizedString(@"zip", nil)];
     self.phoneLabel.text = [NSString stringWithFormat:NSLocalizedString(@"phoneNum", nil)];
-    self.optionKeyTitle.placeholder = NSLocalizedString(@"optional", nil);
+    self.optionKeyTitleTextField.placeholder = NSLocalizedString(@"optional", nil);
+    
+    self.scrollView.delegate = self;
+    self.scrollGestureRecognizer.delegate = self;
+    self.scrollGestureRecognizer = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(hideKeyboardWithTouch:)];
+    [self.scrollView addGestureRecognizer:self.scrollGestureRecognizer];
+    [self.scrollView setContentSize:self.contentView.frame.size];
     
     [self.clearAllButton setTitle: NSLocalizedString(@"clear", nil)];
     [self.saveButton setTitle: NSLocalizedString(@"save", nil)];
     [self.toolbar setBarTintColor:[UIColor primaryColor]];
     [self.toolbar setTintColor: [UIColor whiteColor]];
+}
+
+- (void)setupTextField:(UITextField *)textField withTag:(NSInteger)tag {
+    textField.delegate = self;
+    textField.tag = tag;
+    [self updateBorderColorForTextfield:textField];
 }
 
 - (void)updateBorderColorForTextfield: (UITextField *)textfield {
@@ -105,33 +97,46 @@
 
 - (void)viewWillAppear:(BOOL)animated {
     [super viewWillAppear:true];
-    
+    [self fetchUserLocalKeyboardInfo];
+}
+
+- (void)fetchUserLocalKeyboardInfo {
     NSUserDefaults *shared = [[NSUserDefaults alloc] initWithSuiteName:@"group.com.cathyoun.QuickFillKeyboard"];
-    id currUserInfo = [shared valueForKey:@"userInfo"];
-    self.firstName.text = currUserInfo[@"firstName"];
-    self.lastName.text = currUserInfo[@"lastName"];
-    self.email.text = currUserInfo[@"email"];
-    self.address.text = currUserInfo[@"address1"];
-    self.optionKeyTitle.text = currUserInfo[@"optionTitle"];
-    self.optionContent.text = currUserInfo[@"optionContent"];
-    self.city.text = currUserInfo[@"city"];
-    self.state.text = currUserInfo[@"state"];
-    self.zip.text = currUserInfo[@"zip"];
-    self.phoneNum.text = currUserInfo[@"phoneNum"];
+    NSDictionary *currUserInfo = [shared valueForKey:@"userInfo"];
     
-    
+    self.firstNameTextField.text = currUserInfo[@"firstName"];
+    self.lastNameTextField.text = currUserInfo[@"lastName"];
+    self.emailTextField.text = currUserInfo[@"email"];
+    self.addressTextField.text = currUserInfo[@"address1"];
+    self.optionKeyTitleTextField.text = currUserInfo[@"optionTitle"];
+    self.optionContentTextField.text = currUserInfo[@"optionContent"];
+    self.cityTextField.text = currUserInfo[@"city"];
+    self.stateTextField.text = currUserInfo[@"state"];
+    self.zipTextField.text = currUserInfo[@"zip"];
+    self.phoneNumTextField.text = currUserInfo[@"phoneNum"];
 }
 
 
 - (IBAction)finishAction:(id)sender {
-    self.infoDict = @{@"firstName" : self.firstName.text, @"lastName" : self.lastName.text, @"email" : self.email.text ,@"address1" : self.address.text , @"city" : self.city.text ,@"state" : self.state.text ,@"zip" : self.zip.text, @"phoneNum": self.phoneNum.text, @"optionTitle":self.optionKeyTitle.text, @"optionContent": self.optionContent.text};
+    self.infoDict = @{@"firstName" : self.firstNameTextField.text,
+                      @"lastName" : self.lastNameTextField.text,
+                      @"email" : self.emailTextField.text,
+                      @"address1" : self.addressTextField.text,
+                      @"city" : self.cityTextField.text,
+                      @"state" : self.stateTextField.text,
+                      @"zip" : self.zipTextField.text,
+                      @"phoneNum": self.phoneNumTextField.text,
+                      @"optionTitle":self.optionKeyTitleTextField.text,
+                      @"optionContent": self.optionContentTextField.text};
     
     NSUserDefaults *shared = [[NSUserDefaults alloc] initWithSuiteName:@"group.com.cathyoun.QuickFillKeyboard"];
     [shared setObject:self.infoDict forKey:@"userInfo"];
     [shared synchronize];
     
     // show an alert view
-    UIAlertController *alert = [UIAlertController alertControllerWithTitle: NSLocalizedString(@"alert.updated_title", nil) message: NSLocalizedString(@"alert.updated_message", nil) preferredStyle:UIAlertControllerStyleAlert];
+    UIAlertController *alert = [UIAlertController alertControllerWithTitle: NSLocalizedString(@"alert.updated_title", nil)
+                                                                   message: NSLocalizedString(@"alert.updated_message", nil)
+                                                            preferredStyle:UIAlertControllerStyleAlert];
     UIAlertAction *okay = [UIAlertAction actionWithTitle: NSLocalizedString(@"okay", nil) style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
         [self.navigationController popToRootViewControllerAnimated:true];
     }];
@@ -146,18 +151,20 @@
     UIAlertController *clearAlert = [UIAlertController alertControllerWithTitle: NSLocalizedString(@"alert.clear_title", nil) message: NSLocalizedString(@"alert.clear_message", nil) preferredStyle:UIAlertControllerStyleAlert];
     
     UIAlertAction *deleteAll = [UIAlertAction actionWithTitle: NSLocalizedString(@"yes", nil) style:UIAlertActionStyleDestructive handler:^(UIAlertAction * _Nonnull action) {
-        // empty all the contents
-        self.firstName.text = @"";
-        self.lastName.text = @"";
-        self.email.text = @"";
-        self.address.text = @"";
-        self.city.text = @"";
-        self.state.text = @"";
-        self.zip.text = @"";
-        self.phoneNum.text = @"";
-        self.optionKeyTitle.text = @"";
-        self.optionContent.text = @"";
-        self.infoDict = @{@"firstName" : self.firstName.text, @"lastName" : self.lastName.text, @"email" : self.email.text ,@"address1" : self.address.text , @"city" : self.city.text ,@"state" : self.state.text ,@"zip" : self.zip.text, @"phoneNum": self.phoneNum.text, @"optionTitle":self.optionKeyTitle.text, @"optionContent": self.optionContent.text};
+        for (id subView in self.contentView.subviews) {
+            if ([subView isKindOfClass:[UITextField class]]) {
+                UITextField *t = (UITextField *)subView;
+                t.text = @"";
+            }
+            
+        }
+        
+        NSArray *keys = [self.infoDict allKeys];
+        NSMutableDictionary *mutableDict = [NSMutableDictionary new];
+        for (NSString *key in keys) {
+            mutableDict[key] = @"";
+        }
+        self.infoDict = [mutableDict copy];
         
         NSUserDefaults *shared = [[NSUserDefaults alloc] initWithSuiteName:@"group.com.cathyoun.QuickFillKeyboard"];
         [shared setObject:self.infoDict forKey:@"userInfo"];
@@ -172,7 +179,7 @@
 }
 
 
--(void)hideKeyboardWithTouch:(id)sender{
+- (void)hideKeyboardWithTouch:(id)sender{
     
     [self.view endEditing:YES];
     
@@ -180,54 +187,40 @@
     [self.scrollView setContentOffset:CGPointMake(0.0, 0.0) animated:YES];
 }
 
--(BOOL)textFieldShouldReturn:(UITextField *)textField{
-    
-    if (textField == self.firstName){
-        [self.lastName becomeFirstResponder];
-    } else if (textField == self.lastName){
-        [self.email becomeFirstResponder];
-    } else if (textField == self.email){
-        [self.address becomeFirstResponder];
-        
-    } else  if (textField == self.address){
-        [self.city becomeFirstResponder];
-        //    self.scrollView.contentSize = CGSizeMake(0.0, 50.0);
-        
-    } else if (textField == self.city){
-        [self.state becomeFirstResponder];
-        
-    } else if (textField == self.state) {
-        [self.zip becomeFirstResponder];
-    } else if (textField == self.zip){
-        [self.phoneNum becomeFirstResponder];
-    } else if (textField == self.phoneNum){
-        [self.optionKeyTitle becomeFirstResponder];
-    } else if (textField == self.optionKeyTitle){
-        [self.optionContent becomeFirstResponder];
+- (BOOL)textFieldShouldReturn:(UITextField *)textField {
+    NSInteger nextTag = textField.tag + 1;
+    // Try to find next responder
+    UIResponder* nextResponder = [textField.superview viewWithTag:nextTag];
+    if (nextResponder) {
+        // Found next responder, so set it.
+        [nextResponder becomeFirstResponder];
     } else {
-        [self.view endEditing:YES];
-        [self.scrollView setContentOffset:CGPointMake(0.0, 0.0) animated:YES];
-        
+        // Not found, so remove keyboard.
+        [textField resignFirstResponder];
+        [self hideKeyboardWithTouch:nil];
     }
-    return true;
+    return NO; // We do not want UITextField to insert line-breaks.
 }
 
--(void)textFieldDidBeginEditing:(UITextField *)textField{
-    if (textField == self.city || textField == self.phoneNum || textField == self.state || textField == self.zip || textField == self.optionKeyTitle || textField == self.optionContent) {
+- (void)textFieldDidBeginEditing:(UITextField *)textField{
+    if (textField.tag > 4) {
         
         // Control for Scroll position
-        [self.scrollView setContentOffset:CGPointMake(0.0, self.view.frame.size.height/4) animated:YES];
+        if ([[[UIDevice currentDevice] model] isEqualToString:@"iPhone"]) {
+            if ([UIScreen.mainScreen bounds].size.height < 736) {
+                [self.scrollView setContentOffset:CGPointMake(0.0, self.view.frame.size.height/4) animated:YES];
+            } else {
+                [self.scrollView setContentOffset:CGPointMake(0.0, self.view.frame.size.height/6) animated:YES];
+            }
+        }
     }
 }
 
-// not allowing long key name
 - (BOOL)textField:(UITextField *)textField shouldChangeCharactersInRange:(NSRange)range replacementString:(NSString *)string {
-    if (textField == self.optionKeyTitle) {
-        if(range.length + range.location > textField.text.length)
-        {
+    if (textField == self.optionKeyTitleTextField) {
+        if(range.length + range.location > textField.text.length) {
             return NO;
         }
-        
         NSUInteger newLength = [textField.text length] + [string length] - range.length;
         return newLength <= 15;
     }
