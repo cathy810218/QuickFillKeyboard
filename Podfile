@@ -27,7 +27,6 @@ target 'QuickFillKeyboard' do
   # Pods for QuickFillKeyboard
 
   pod 'Masonry'
-  pod 'LaunchKit'
   pod 'Appirater'
   
 end

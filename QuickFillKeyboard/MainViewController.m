@@ -7,13 +7,13 @@
 //
 
 #import "MainViewController.h"
-#import "LaunchKit.h"
 #import "HelpViewController.h"
 #import "Constants.h"
 #import <Masonry.h>
 //#define APP_STORE_ID 1067669330
-@interface MainViewController ()
 static NSString *const iOSAppStoreURLFormat = @"itms-apps://itunes.apple.com/WebObjects/MZStore.woa/wa/viewContentsUserReviews?type=Purple+Software&id=%d";
+
+@interface MainViewController ()
 
 @property (weak, nonatomic) IBOutlet UILabel *fillInfoLabel;
 @property (weak, nonatomic) IBOutlet UILabel *setupLabel;
@@ -52,10 +52,6 @@ static NSString *const iOSAppStoreURLFormat = @"itms-apps://itunes.apple.com/Web
 - (void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
-    [[LaunchKit sharedInstance] presentAppReleaseNotesIfNeededFromViewController:self completion:^(BOOL didPresent) {
-        if (didPresent) {
-            NSLog(@"Woohoo, we showed the release notes card!");
-        }
-    }];
+
 }
 @end

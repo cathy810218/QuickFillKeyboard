@@ -7,7 +7,6 @@
 //
 
 #import "AppDelegate.h"
-#import "LaunchKit.h"
 #import "Appirater.h"
 #import "Constants.h"
 #import "MainViewController.h"
@@ -22,7 +21,6 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
-    [LaunchKit launchWithToken:@"Q6ZsS9ePmk0hu2vbAGDiHfqSWDhofIA7o5YLUmV54ge3"];
     [Appirater setAppId:kAppID];
     [Appirater setDaysUntilPrompt:2];
     [Appirater setUsesUntilPrompt:3];

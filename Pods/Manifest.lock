@@ -1,20 +1,15 @@
 PODS:
-  - Appirater (2.0.5)
-  - LaunchKit (2.1.4):
-    - LaunchKit/LaunchKit (= 2.1.4)
-  - LaunchKit/LaunchKit (2.1.4)
+  - Appirater (2.1.2)
   - Masonry (1.0.2)
 
 DEPENDENCIES:
   - Appirater
-  - LaunchKit
   - Masonry
 
 SPEC CHECKSUMS:
-  Appirater: e7c0a47fb67ee5041ce8479e6ba960927fb40264
-  LaunchKit: 95ad4fb171a0f8ea1c80aa26d4fb7bd637788f9c
+  Appirater: f1c9e53e8b612193e6256144f6a0fd2e31f4340d
   Masonry: 7c429b56da9d4ee0bbb3ed77a5ea710d6a5df39e
 
-PODFILE CHECKSUM: 97a3695daba17d40e61422bfaa0eb3d485eb6ed1
+PODFILE CHECKSUM: f2a8c4fecda9af041cd93ce2e8f37fd070064716
 
-COCOAPODS: 1.0.1
+COCOAPODS: 1.2.1

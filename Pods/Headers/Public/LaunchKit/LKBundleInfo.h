@@ -1,1 +1,0 @@
-../../../LaunchKit/LaunchKit/Classes/Bundles/LKBundleInfo.h
