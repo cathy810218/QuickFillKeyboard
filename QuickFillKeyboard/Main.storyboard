@@ -133,7 +133,7 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fhA-dD-8yd">
-                                                <rect key="frame" x="152" y="10" width="423" height="30"/>
+                                                <rect key="frame" x="122" y="10" width="453" height="30"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
@@ -168,32 +168,32 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="IRg-DE-fZX">
-                                                <rect key="frame" x="152" y="52" width="423" height="30"/>
+                                                <rect key="frame" x="122" y="52" width="453" height="30"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9i0-cn-SwD">
-                                                <rect key="frame" x="152" y="94" width="423" height="30"/>
+                                                <rect key="frame" x="122" y="94" width="453" height="30"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WgG-ai-Kei">
-                                                <rect key="frame" x="152" y="136" width="423" height="30"/>
+                                                <rect key="frame" x="122" y="136" width="453" height="30"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eUK-6y-65b">
-                                                <rect key="frame" x="152" y="220" width="423" height="30"/>
+                                                <rect key="frame" x="122" y="220" width="453" height="30"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tRO-XE-JBT">
-                                                <rect key="frame" x="152" y="262" width="423" height="30"/>
+                                                <rect key="frame" x="122" y="262" width="453" height="30"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bO5-9D-VxC">
-                                                <rect key="frame" x="152" y="304" width="423" height="30"/>
+                                                <rect key="frame" x="122" y="304" width="453" height="30"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
@@ -210,12 +210,12 @@
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="q8n-bt-H1y">
-                                                <rect key="frame" x="152" y="346" width="423" height="30"/>
+                                                <rect key="frame" x="122" y="346" width="453" height="30"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
                                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nlY-9c-3j4">
-                                                <rect key="frame" x="30" y="346" width="107" height="30"/>
+                                                <rect key="frame" x="30" y="346" width="77" height="30"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                 <textInputTraits key="textInputTraits"/>
                                             </textField>
@@ -258,12 +258,12 @@
                                             <constraint firstItem="2nf-tJ-0Dj" firstAttribute="centerY" secondItem="9i0-cn-SwD" secondAttribute="centerY" id="rID-9F-Du0"/>
                                             <constraint firstItem="WgG-ai-Kei" firstAttribute="top" secondItem="9i0-cn-SwD" secondAttribute="bottom" constant="12" id="rWe-36-mAs"/>
                                             <constraint firstItem="nlY-9c-3j4" firstAttribute="leading" secondItem="iH8-4L-sKA" secondAttribute="leading" id="rez-Cq-z60"/>
-                                            <constraint firstItem="fhA-dD-8yd" firstAttribute="leading" secondItem="34h-hm-67t" secondAttribute="trailing" constant="80" id="rob-KP-o32"/>
+                                            <constraint firstItem="fhA-dD-8yd" firstAttribute="leading" secondItem="34h-hm-67t" secondAttribute="trailing" constant="50" id="rob-KP-o32"/>
                                             <constraint firstItem="tRO-XE-JBT" firstAttribute="trailing" secondItem="eUK-6y-65b" secondAttribute="trailing" id="zNc-dr-uno"/>
                                         </constraints>
                                     </view>
                                     <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="nNl-zY-3ts">
-                                        <rect key="frame" x="152" y="198" width="423" height="30"/>
+                                        <rect key="frame" x="122" y="198" width="453" height="30"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits"/>
                                     </textField>
