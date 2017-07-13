@@ -13,6 +13,7 @@
 #import <Masonry.h>
 //#define APP_STORE_ID 1067669330
 @interface MainViewController ()
+static NSString *const iOSAppStoreURLFormat = @"itms-apps://itunes.apple.com/WebObjects/MZStore.woa/wa/viewContentsUserReviews?type=Purple+Software&id=%d";
 
 @property (weak, nonatomic) IBOutlet UILabel *fillInfoLabel;
 @property (weak, nonatomic) IBOutlet UILabel *setupLabel;
@@ -44,10 +45,7 @@
 
 
 - (IBAction)rateMePressed:(id)sender {
-  static NSString *const iOS7AppStoreURLFormat = @"itms-apps://itunes.apple.com/app/id%d";
-  static NSString *const iOSAppStoreURLFormat = @"itms-apps://itunes.apple.com/WebObjects/MZStore.woa/wa/viewContentsUserReviews?type=Purple+Software&id=%d";
-  
-  NSURL *linkMe = [NSURL URLWithString:[NSString stringWithFormat:([[UIDevice currentDevice].systemVersion floatValue] >= 7.0f)? iOS7AppStoreURLFormat: iOSAppStoreURLFormat, [kAppID intValue]]]; // Would contain the right link
+  NSURL *linkMe = [NSURL URLWithString:[NSString stringWithFormat: iOSAppStoreURLFormat, [kAppID intValue]]];
   [[UIApplication sharedApplication] openURL:linkMe];
 }
 
