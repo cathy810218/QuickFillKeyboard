@@ -11,27 +11,24 @@
 #import "InfoViewController.h"
 #import <QuartzCore/QuartzCore.h>
 @interface KeyboardViewController ()
-@property (nonatomic, strong) QuickFill *myKeyboard;
-@property (nonatomic, strong) UIPasteboard *pasteboard;
-@property (nonatomic, strong) UILongPressGestureRecognizer *lpgr;
-@property NSTimer *timer;
+@property (strong, nonatomic) QuickFill *myKeyboard;
+@property (strong, nonatomic) UIPasteboard *pasteboard;
+@property (strong, nonatomic) NSTimer *timer;
+
 @property int timeCount;
 
 @end
 
 @implementation KeyboardViewController
-//
-//- (void)updateViewConstraints {
-//    [super updateViewConstraints];
-//}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.myKeyboard = [[QuickFill alloc]init];
+    self.myKeyboard = [[QuickFill alloc] init];
     self.myKeyboard = [[[NSBundle mainBundle] loadNibNamed:@"QuickFill" owner:self options:nil] objectAtIndex:0];
     self.inputView = (UIInputView *)self.myKeyboard;
+    self.inputView.bounds = CGRectMake(0, 0, 350, 200);
+    self.myKeyboard.bounds = CGRectMake(0, 0, 350, 200);
 
-//    self.myKeyboard.bounds = CGRectMake(0, 0, 350, 200);
     self.myKeyboard.nextKeyboard.layer.cornerRadius = 5.0;
     self.myKeyboard.nextKeyboard.layer.masksToBounds = false;
     self.myKeyboard.nextKeyboard.layer.shadowOpacity = 1.0;
@@ -55,7 +52,7 @@
     [self addGestureToKeyboard];
     
     UIImage *globalImg = [UIImage imageNamed:@"gkey.png"];
-    [self.myKeyboard.nextKeyboard setImage:globalImg forState:UIControlStateNormal];
+    [self.myKeyboard.nextKeyboard setBackgroundImage:globalImg forState:UIControlStateNormal];
     [self.inputView addSubview:self.myKeyboard.nextKeyboard];
 }
 
@@ -67,7 +64,8 @@
     btn.layer.shadowRadius = 0;
     btn.layer.shadowOffset = CGSizeMake(0, 1.0);
     [btn setTitle:name forState:UIControlStateNormal];
-    
+    btn.contentHorizontalAlignment = UIControlContentVerticalAlignmentCenter;
+
     NSUserDefaults *shared = [[NSUserDefaults alloc] initWithSuiteName:@"group.com.cathyoun.QuickFillKeyboard"];
     id userInfo = [shared valueForKey:@"userInfo"];
     if (userInfo[@"optionTitle"]) {
@@ -114,7 +112,7 @@
                         forControlEvents:UIControlEventTouchDown];
     [self.myKeyboard.deleteKey addTarget:self
                                   action:@selector(touchEnd:)
-                        forControlEvents: UIControlEventTouchCancel];
+                        forControlEvents: UIControlEventTouchCancel | UIControlEventTouchUpInside | UIControlEventTouchUpOutside | UIControlEventTouchDragExit];
     
     [self.myKeyboard.firstName addTarget:self
                                   action:@selector(pressFirstNameKey)
