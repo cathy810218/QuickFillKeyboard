@@ -9,20 +9,20 @@
 #import <UIKit/UIKit.h>
 
 @interface QuickFill : UIView
-@property (weak, nonatomic) IBOutlet UIButton *firstName;
-@property (weak, nonatomic) IBOutlet UIButton *lastName;
-@property (weak, nonatomic) IBOutlet UIButton *email;
-@property (weak, nonatomic) IBOutlet UIButton *phoneNum;
-@property (weak, nonatomic) IBOutlet UIButton *address1;
-@property (weak, nonatomic) IBOutlet UIButton *optionKey;
-@property (weak, nonatomic) IBOutlet UIButton *city;
-@property (weak, nonatomic) IBOutlet UIButton *state;
-@property (weak, nonatomic) IBOutlet UIButton *zip;
-@property (weak, nonatomic) IBOutlet UIButton *spaceKey;
-@property (weak, nonatomic) IBOutlet UIButton *deleteKey;
-@property (weak, nonatomic) IBOutlet UIButton *returnKey;
-@property (weak, nonatomic) IBOutlet UIButton *nextKeyboard;
-@property (weak, nonatomic) IBOutlet UILongPressGestureRecognizer *lpgr;
+@property (strong, nonatomic) UIButton *firstName;
+@property (strong, nonatomic) UIButton *lastName;
+@property (strong, nonatomic) UIButton *email;
+@property (strong, nonatomic) UIButton *phoneNum;
+@property (strong, nonatomic) UIButton *address1;
+@property (strong, nonatomic) UIButton *optionKey;
+@property (strong, nonatomic) UIButton *city;
+@property (strong, nonatomic) UIButton *state;
+@property (strong, nonatomic) UIButton *zip;
+@property (strong, nonatomic) UIButton *spaceKey;
+@property (strong, nonatomic) UIButton *deleteKey;
+@property (strong, nonatomic) UIButton *returnKey;
+@property (strong, nonatomic) UIButton *nextKeyboard;
+@property (strong, nonatomic) UILongPressGestureRecognizer *lpgr;
 
 
 @end

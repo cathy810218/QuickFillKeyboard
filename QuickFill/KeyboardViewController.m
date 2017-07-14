@@ -23,31 +23,33 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.myKeyboard = [[QuickFill alloc] init];
-    self.myKeyboard = [[[NSBundle mainBundle] loadNibNamed:@"QuickFill" owner:self options:nil] objectAtIndex:0];
-    self.inputView = (UIInputView *)self.myKeyboard;
-    self.inputView.bounds = CGRectMake(0, 0, 350, 200);
-    self.myKeyboard.bounds = CGRectMake(0, 0, 350, 200);
+    self.myKeyboard = [[QuickFill alloc] initWithFrame:CGRectMake(0, 0, 350, 200)];
 
-    self.myKeyboard.nextKeyboard.layer.cornerRadius = 5.0;
-    self.myKeyboard.nextKeyboard.layer.masksToBounds = false;
-    self.myKeyboard.nextKeyboard.layer.shadowOpacity = 1.0;
-    self.myKeyboard.nextKeyboard.layer.shadowRadius = 0;
-    self.myKeyboard.nextKeyboard.layer.shadowOffset = CGSizeMake(0, 1.0);
-    self.myKeyboard.nextKeyboard.layer.shadowColor = [UIColor grayColor].CGColor;
+    self.inputView = (UIInputView *)self.myKeyboard;
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillShow:) name:UIKeyboardWillShowNotification object:nil];
+    self.inputView.autoresizingMask = UIViewAutoresizingFlexibleHeight;
+
+//    self.myKeyboard.bounds = CGRectMake(0, 0, 350, 200);
+
+//    self.myKeyboard.nextKeyboard.layer.cornerRadius = 5.0;
+//    self.myKeyboard.nextKeyboard.layer.masksToBounds = false;
+//    self.myKeyboard.nextKeyboard.layer.shadowOpacity = 1.0;
+//    self.myKeyboard.nextKeyboard.layer.shadowRadius = 0;
+//    self.myKeyboard.nextKeyboard.layer.shadowOffset = CGSizeMake(0, 1.0);
+//    self.myKeyboard.nextKeyboard.layer.shadowColor = [UIColor grayColor].CGColor;
     
-    [self setKeyboardKey:self.myKeyboard.city withKey: NSLocalizedString(@"city",nil)];
-    [self setKeyboardKey:self.myKeyboard.state withKey: NSLocalizedString(@"state",nil)];
-    [self setKeyboardKey:self.myKeyboard.zip withKey: NSLocalizedString(@"zip",nil)];
-    [self setKeyboardKey:self.myKeyboard.email withKey: NSLocalizedString(@"email",nil)];
-    [self setKeyboardKey:self.myKeyboard.address1 withKey: NSLocalizedString(@"address",nil)];
-    [self setKeyboardKey:self.myKeyboard.phoneNum withKey: NSLocalizedString(@"phoneNum",nil)];
-    [self setKeyboardKey:self.myKeyboard.firstName withKey: NSLocalizedString(@"firstName",nil)];
-    [self setKeyboardKey:self.myKeyboard.lastName withKey: NSLocalizedString(@"lastName",nil)];
-    [self setKeyboardKey:self.myKeyboard.spaceKey withKey: NSLocalizedString(@"space",nil)];
-    [self setKeyboardKey:self.myKeyboard.returnKey withKey: NSLocalizedString(@"return",nil)];
-    [self setKeyboardKey:self.myKeyboard.deleteKey withKey: NSLocalizedString(@"delete",nil)];
-    [self setKeyboardKey:self.myKeyboard.optionKey withKey: NSLocalizedString(@"optional", nil)];
+//    [self setKeyboardKey:self.myKeyboard.city withKey: NSLocalizedString(@"city",nil)];
+//    [self setKeyboardKey:self.myKeyboard.state withKey: NSLocalizedString(@"state",nil)];
+//    [self setKeyboardKey:self.myKeyboard.zip withKey: NSLocalizedString(@"zip",nil)];
+//    [self setKeyboardKey:self.myKeyboard.email withKey: NSLocalizedString(@"email",nil)];
+//    [self setKeyboardKey:self.myKeyboard.address1 withKey: NSLocalizedString(@"address",nil)];
+//    [self setKeyboardKey:self.myKeyboard.phoneNum withKey: NSLocalizedString(@"phoneNum",nil)];
+//    [self setKeyboardKey:self.myKeyboard.firstName withKey: NSLocalizedString(@"firstName",nil)];
+//    [self setKeyboardKey:self.myKeyboard.lastName withKey: NSLocalizedString(@"lastName",nil)];
+//    [self setKeyboardKey:self.myKeyboard.spaceKey withKey: NSLocalizedString(@"space",nil)];
+//    [self setKeyboardKey:self.myKeyboard.returnKey withKey: NSLocalizedString(@"return",nil)];
+//    [self setKeyboardKey:self.myKeyboard.deleteKey withKey: NSLocalizedString(@"delete",nil)];
+//    [self setKeyboardKey:self.myKeyboard.optionKey withKey: NSLocalizedString(@"optional", nil)];
     
     [self addGestureToKeyboard];
     
@@ -56,29 +58,8 @@
     [self.inputView addSubview:self.myKeyboard.nextKeyboard];
 }
 
-- (void)setKeyboardKey:(UIButton *)btn withKey:(NSString *)name{
-    btn.layer.cornerRadius = 5.0;
-    btn.layer.masksToBounds = false;
-    btn.layer.shadowColor = [UIColor lightGrayColor].CGColor;
-    btn.layer.shadowOpacity = 1.0;
-    btn.layer.shadowRadius = 0;
-    btn.layer.shadowOffset = CGSizeMake(0, 1.0);
-    [btn setTitle:name forState:UIControlStateNormal];
-    btn.contentHorizontalAlignment = UIControlContentVerticalAlignmentCenter;
-
-    NSUserDefaults *shared = [[NSUserDefaults alloc] initWithSuiteName:@"group.com.cathyoun.QuickFillKeyboard"];
-    id userInfo = [shared valueForKey:@"userInfo"];
-    if (userInfo[@"optionTitle"]) {
-        [self.myKeyboard.optionKey setTitle:userInfo[@"optionTitle"] forState:UIControlStateNormal];
-    }
-    
-    if ([name isEqualToString:@"Delete"] || [name isEqualToString:@"Return"]) {
-        btn.layer.shadowColor = [UIColor grayColor].CGColor;
-    }
-}
-
-- (void)textWillChange:(id<UITextInput>)textInput {
-    // The app is about to change the document's contents. Perform any preparation here.
+- (void)keyboardWillShow:(NSNotification *)notification {
+    NSLog(@"%f", [notification.userInfo[UIKeyboardFrameEndUserInfoKey] CGRectValue].size.height);
 }
 
 - (void)textDidChange:(id<UITextInput>)textInput {
