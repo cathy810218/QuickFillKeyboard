@@ -14,6 +14,7 @@
 @property (strong, nonatomic) QuickFill *myKeyboard;
 @property (strong, nonatomic) UIPasteboard *pasteboard;
 @property (strong, nonatomic) NSTimer *timer;
+@property (strong, nonatomic) NSDictionary *userInfo;
 
 @property int timeCount;
 
@@ -23,43 +24,24 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.myKeyboard = [[QuickFill alloc] initWithFrame:CGRectMake(0, 0, 350, 200)];
+    NSUserDefaults *shared = [[NSUserDefaults alloc] initWithSuiteName:@"group.com.cathyoun.QuickFillKeyboard"];
+    self.userInfo = [shared valueForKey:@"userInfo"];
+    
+    NSArray *keyboardRect = [shared arrayForKey:@"keyboardRect"];
+    
+    NSLog(@"found: %f, %f", [keyboardRect[0] floatValue], [keyboardRect[1] floatValue]);
+    
+    self.myKeyboard = [[QuickFill alloc] initWithFrame:CGRectMake(0, 0, [keyboardRect[0] floatValue], [keyboardRect[1] floatValue])];
 
     self.inputView = (UIInputView *)self.myKeyboard;
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillShow:) name:UIKeyboardWillShowNotification object:nil];
+
     self.inputView.autoresizingMask = UIViewAutoresizingFlexibleHeight;
 
-//    self.myKeyboard.bounds = CGRectMake(0, 0, 350, 200);
-
-//    self.myKeyboard.nextKeyboard.layer.cornerRadius = 5.0;
-//    self.myKeyboard.nextKeyboard.layer.masksToBounds = false;
-//    self.myKeyboard.nextKeyboard.layer.shadowOpacity = 1.0;
-//    self.myKeyboard.nextKeyboard.layer.shadowRadius = 0;
-//    self.myKeyboard.nextKeyboard.layer.shadowOffset = CGSizeMake(0, 1.0);
-//    self.myKeyboard.nextKeyboard.layer.shadowColor = [UIColor grayColor].CGColor;
-    
-//    [self setKeyboardKey:self.myKeyboard.city withKey: NSLocalizedString(@"city",nil)];
-//    [self setKeyboardKey:self.myKeyboard.state withKey: NSLocalizedString(@"state",nil)];
-//    [self setKeyboardKey:self.myKeyboard.zip withKey: NSLocalizedString(@"zip",nil)];
-//    [self setKeyboardKey:self.myKeyboard.email withKey: NSLocalizedString(@"email",nil)];
-//    [self setKeyboardKey:self.myKeyboard.address1 withKey: NSLocalizedString(@"address",nil)];
-//    [self setKeyboardKey:self.myKeyboard.phoneNum withKey: NSLocalizedString(@"phoneNum",nil)];
-//    [self setKeyboardKey:self.myKeyboard.firstName withKey: NSLocalizedString(@"firstName",nil)];
-//    [self setKeyboardKey:self.myKeyboard.lastName withKey: NSLocalizedString(@"lastName",nil)];
-//    [self setKeyboardKey:self.myKeyboard.spaceKey withKey: NSLocalizedString(@"space",nil)];
-//    [self setKeyboardKey:self.myKeyboard.returnKey withKey: NSLocalizedString(@"return",nil)];
-//    [self setKeyboardKey:self.myKeyboard.deleteKey withKey: NSLocalizedString(@"delete",nil)];
-//    [self setKeyboardKey:self.myKeyboard.optionKey withKey: NSLocalizedString(@"optional", nil)];
-    
     [self addGestureToKeyboard];
     
     UIImage *globalImg = [UIImage imageNamed:@"gkey.png"];
     [self.myKeyboard.nextKeyboard setBackgroundImage:globalImg forState:UIControlStateNormal];
     [self.inputView addSubview:self.myKeyboard.nextKeyboard];
-}
-
-- (void)keyboardWillShow:(NSNotification *)notification {
-    NSLog(@"%f", [notification.userInfo[UIKeyboardFrameEndUserInfoKey] CGRectValue].size.height);
 }
 
 - (void)textDidChange:(id<UITextInput>)textInput {
@@ -175,77 +157,58 @@
 }
 
 -(void)pressFirstNameKey{
-    NSUserDefaults *shared = [[NSUserDefaults alloc] initWithSuiteName:@"group.com.cathyoun.QuickFillKeyboard"];
-    id userInfo = [shared valueForKey:@"userInfo"];
-    if (userInfo[@"firstName"]) {
-        [self.textDocumentProxy insertText: userInfo[@"firstName"]];
+    if (self.userInfo[@"firstName"]) {
+        [self.textDocumentProxy insertText: self.userInfo[@"firstName"]];
     }
 }
 
 -(void)pressLastNameKey {
-    NSUserDefaults *shared = [[NSUserDefaults alloc] initWithSuiteName:@"group.com.cathyoun.QuickFillKeyboard"];
-    id userInfo = [shared valueForKey:@"userInfo"];
-    if (userInfo[@"lastName"]) {
-        [self.textDocumentProxy insertText: userInfo[@"lastName"]];
+    if (self.userInfo[@"lastName"]) {
+        [self.textDocumentProxy insertText: self.userInfo[@"lastName"]];
     }
 }
 
 -(void)pressEmailKey {
-    NSUserDefaults *shared = [[NSUserDefaults alloc] initWithSuiteName:@"group.com.cathyoun.QuickFillKeyboard"];
-    id userInfo = [shared valueForKey:@"userInfo"];
-    if (userInfo[@"email"]) {
-        [self.textDocumentProxy insertText: userInfo[@"email"]];
+    if (self.userInfo[@"email"]) {
+        [self.textDocumentProxy insertText: self.userInfo[@"email"]];
     }
 }
 
 -(void)pressPhoneKey {
-    NSUserDefaults *shared = [[NSUserDefaults alloc] initWithSuiteName:@"group.com.cathyoun.QuickFillKeyboard"];
-    id userInfo = [shared valueForKey:@"userInfo"];
-    if (userInfo[@"phoneNum"]) {
-        [self.textDocumentProxy insertText: userInfo[@"phoneNum"]];
+    if (self.userInfo[@"phoneNum"]) {
+        [self.textDocumentProxy insertText: self.userInfo[@"phoneNum"]];
     }
 }
 
 -(void)pressAddress1Key {
-    NSUserDefaults *shared = [[NSUserDefaults alloc] initWithSuiteName:@"group.com.cathyoun.QuickFillKeyboard"];
-    id userInfo = [shared valueForKey:@"userInfo"];
-    if (userInfo[@"address1"]) {
-        [self.textDocumentProxy insertText: userInfo[@"address1"]];
+    if (self.userInfo[@"address1"]) {
+        [self.textDocumentProxy insertText: self.userInfo[@"address1"]];
     }
 }
 
 
 - (void)pressOptionKey {
-    NSUserDefaults *shared = [[NSUserDefaults alloc] initWithSuiteName:@"group.com.cathyoun.QuickFillKeyboard"];
-    id userInfo = [shared valueForKey:@"userInfo"];
-    if (userInfo[@"optionContent"]) {
-        [self.textDocumentProxy insertText: userInfo[@"optionContent"]];
+    if (self.userInfo[@"optionContent"]) {
+        [self.textDocumentProxy insertText: self.userInfo[@"optionContent"]];
     }
 }
 
 -(void)pressCityKey {
-    NSUserDefaults *shared = [[NSUserDefaults alloc] initWithSuiteName:@"group.com.cathyoun.QuickFillKeyboard"];
-    id userInfo = [shared valueForKey:@"userInfo"];
-    if (userInfo[@"city"]) {
-        [self.textDocumentProxy insertText: userInfo[@"city"]];
+    if (self.userInfo[@"city"]) {
+        [self.textDocumentProxy insertText: self.userInfo[@"city"]];
     }
 }
 
 -(void)pressStateKey {
-    NSUserDefaults *shared = [[NSUserDefaults alloc] initWithSuiteName:@"group.com.cathyoun.QuickFillKeyboard"];
-    id userInfo = [shared valueForKey:@"userInfo"];
-    if (userInfo[@"state"]) {
-        [self.textDocumentProxy insertText: userInfo[@"state"]];
+    if (self.userInfo[@"state"]) {
+        [self.textDocumentProxy insertText: self.userInfo[@"state"]];
     }
 }
 
 -(void)pressZipKey {
-    NSUserDefaults *shared = [[NSUserDefaults alloc] initWithSuiteName:@"group.com.cathyoun.QuickFillKeyboard"];
-    id userInfo = [shared valueForKey:@"userInfo"];
-    if (userInfo[@"zip"]) {
-        [self.textDocumentProxy insertText: userInfo[@"zip"]];
+    if (self.userInfo[@"zip"]) {
+        [self.textDocumentProxy insertText: self.userInfo[@"zip"]];
     }
 }
-
 
 @end
