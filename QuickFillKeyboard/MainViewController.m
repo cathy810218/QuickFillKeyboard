@@ -44,7 +44,6 @@ static NSString *const iOSAppStoreURLFormat = @"itms-apps://itunes.apple.com/Web
     
     NSValue* keyboardFrameBegin = [keyboardInfo valueForKey:UIKeyboardFrameEndUserInfoKey];
     CGRect keyboardFrameBeginRect = [keyboardFrameBegin CGRectValue];
-    NSLog(@"found: %f, %f", keyboardFrameBeginRect.size.width, keyboardFrameBeginRect.size.height);
     NSArray *rectArr = @[[NSNumber numberWithFloat:keyboardFrameBeginRect.size.width],
                          [NSNumber numberWithFloat:keyboardFrameBeginRect.size.height]];
     NSUserDefaults *shared = [[NSUserDefaults alloc] initWithSuiteName:@"group.com.cathyoun.QuickFillKeyboard"];
