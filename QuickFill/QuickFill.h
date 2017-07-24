@@ -24,5 +24,6 @@
 @property (strong, nonatomic) UIButton *nextKeyboard;
 @property (strong, nonatomic) UILongPressGestureRecognizer *lpgr;
 
+- (instancetype)initWithFrame:(CGRect)frame;
 
 @end

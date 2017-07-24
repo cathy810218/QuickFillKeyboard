@@ -16,7 +16,7 @@
 @property (strong, nonatomic) NSTimer *timer;
 @property (strong, nonatomic) NSDictionary *userInfo;
 
-@property int timeCount;
+@property (assign, nonatomic) int timeCount;
 
 @end
 
@@ -26,22 +26,13 @@
     [super viewDidLoad];
     NSUserDefaults *shared = [[NSUserDefaults alloc] initWithSuiteName:@"group.com.cathyoun.QuickFillKeyboard"];
     self.userInfo = [shared valueForKey:@"userInfo"];
+    self.myKeyboard = [[QuickFill alloc] initWithFrame:CGRectMake(0, 0, 0, 208)];
     
-    NSArray *keyboardRect = [shared arrayForKey:@"keyboardRect"];
-    
-    NSLog(@"found: %f, %f", [keyboardRect[0] floatValue], [keyboardRect[1] floatValue]);
-    
-    self.myKeyboard = [[QuickFill alloc] initWithFrame:CGRectMake(0, 0, [keyboardRect[0] floatValue], [keyboardRect[1] floatValue])];
-
     self.inputView = (UIInputView *)self.myKeyboard;
-
-    self.inputView.autoresizingMask = UIViewAutoresizingFlexibleHeight;
-
     [self addGestureToKeyboard];
-    
-    UIImage *globalImg = [UIImage imageNamed:@"gkey.png"];
-    [self.myKeyboard.nextKeyboard setBackgroundImage:globalImg forState:UIControlStateNormal];
-    [self.inputView addSubview:self.myKeyboard.nextKeyboard];
+}
+
+- (void)viewWillTransitionToSize:(CGSize)size withTransitionCoordinator:(id<UIViewControllerTransitionCoordinator>)coordinator {
 }
 
 - (void)textDidChange:(id<UITextInput>)textInput {
