@@ -36,6 +36,20 @@ static NSString *const iOSAppStoreURLFormat = @"itms-apps://itunes.apple.com/Web
     [self.view addSubview: self.fillInfoLabel];
     [self.view addSubview: self.setupLabel];
     [self.view addSubview: self.rateLabel];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillChange:) name:UIKeyboardWillChangeFrameNotification object:nil];
+}
+
+- (void)keyboardWillChange:(NSNotification *)notification {
+    NSDictionary *keyboardInfo = [notification userInfo];
+    
+    NSValue* keyboardFrameBegin = [keyboardInfo valueForKey:UIKeyboardFrameEndUserInfoKey];
+    CGRect keyboardFrameBeginRect = [keyboardFrameBegin CGRectValue];
+    NSLog(@"found: %f, %f", keyboardFrameBeginRect.size.width, keyboardFrameBeginRect.size.height);
+    NSArray *rectArr = @[[NSNumber numberWithFloat:keyboardFrameBeginRect.size.width],
+                         [NSNumber numberWithFloat:keyboardFrameBeginRect.size.height]];
+    NSUserDefaults *shared = [[NSUserDefaults alloc] initWithSuiteName:@"group.com.cathyoun.QuickFillKeyboard"];
+    [shared setObject:rectArr forKey:@"keyboardRect"];
+    
 }
 
 - (IBAction)helpButtonPressed:(id)sender {
@@ -49,9 +63,7 @@ static NSString *const iOSAppStoreURLFormat = @"itms-apps://itunes.apple.com/Web
   [[UIApplication sharedApplication] openURL:linkMe];
 }
 
-- (void)viewDidAppear:(BOOL)animated
-{
-    [super viewDidAppear:animated];
-
+-(void)dealloc {
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 @end

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		23BD50017288AD543551632D /* libPods-QuickFill.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 706124D399E914E3A2A8B68C /* libPods-QuickFill.a */; };
+		3DAEA10D1F25DA9100AD21AE /* UIColor+Hex.m in Sources */ = {isa = PBXBuildFile; fileRef = 3DAEA10C1F25DA9100AD21AE /* UIColor+Hex.m */; };
 		3DD52FDC1F1848FD0023CEC0 /* gkey.png in Resources */ = {isa = PBXBuildFile; fileRef = 3DD52FDB1F1848FD0023CEC0 /* gkey.png */; };
 		610431B8CA94F093A7916B10 /* libPods-QuickFillKeyboardTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = DA54BB5AAF342A997DB22E96 /* libPods-QuickFillKeyboardTests.a */; };
 		6B03308C1D8BF3E200502699 /* HelpViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B0330891D8BF3E200502699 /* HelpViewController.m */; };
@@ -25,7 +26,6 @@
 		6BAC02091D8DDBC600D82DAE /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 6B2212B51D8C4A9D00663AE0 /* Localizable.strings */; };
 		6BC370571C161A79006EB6C7 /* QuickFill.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BC370561C161A79006EB6C7 /* QuickFill.m */; };
 		6BE2C3FE1D8D88F000C9E488 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6BE2C3FD1D8D88F000C9E488 /* Main.storyboard */; };
-		6BE2C4001D8D8A4300C9E488 /* QuickFill.xib in Resources */ = {isa = PBXBuildFile; fileRef = 6BE2C3FF1D8D8A4300C9E488 /* QuickFill.xib */; };
 		6BE2C4061D8D8FE300C9E488 /* UIColor+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 6BE2C4051D8D8FE300C9E488 /* UIColor+Extension.m */; };
 		C04809530FD33714B7891AEC /* libPods-QuickFillKeyboard.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 2375A9536D5206894590D330 /* libPods-QuickFillKeyboard.a */; };
 		D4F400FC224D4BB6B80E41F8 /* libPods-QuickFillKeyboardUITests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4DDD090A5233E7EF038BBCEA /* libPods-QuickFillKeyboardUITests.a */; };
@@ -71,6 +71,8 @@
 
 /* Begin PBXFileReference section */
 		2375A9536D5206894590D330 /* libPods-QuickFillKeyboard.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-QuickFillKeyboard.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3DAEA10B1F25DA9100AD21AE /* UIColor+Hex.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Hex.h"; sourceTree = "<group>"; };
+		3DAEA10C1F25DA9100AD21AE /* UIColor+Hex.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Hex.m"; sourceTree = "<group>"; };
 		3DD52FDB1F1848FD0023CEC0 /* gkey.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = gkey.png; sourceTree = "<group>"; };
 		438B0E0B01F7E5318BF67E74 /* Pods-QuickFillKeyboardTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-QuickFillKeyboardTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-QuickFillKeyboardTests/Pods-QuickFillKeyboardTests.release.xcconfig"; sourceTree = "<group>"; };
 		4DDD090A5233E7EF038BBCEA /* libPods-QuickFillKeyboardUITests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-QuickFillKeyboardUITests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -108,7 +110,6 @@
 		6BC370581C188D98006EB6C7 /* QuickFill.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = QuickFill.entitlements; sourceTree = "<group>"; };
 		6BC370591C188E4A006EB6C7 /* QuickFillKeyboard.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = QuickFillKeyboard.entitlements; sourceTree = "<group>"; };
 		6BE2C3FD1D8D88F000C9E488 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
-		6BE2C3FF1D8D8A4300C9E488 /* QuickFill.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = QuickFill.xib; sourceTree = "<group>"; };
 		6BE2C4041D8D8FE300C9E488 /* UIColor+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Extension.h"; sourceTree = "<group>"; };
 		6BE2C4051D8D8FE300C9E488 /* UIColor+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Extension.m"; sourceTree = "<group>"; };
 		706124D399E914E3A2A8B68C /* libPods-QuickFill.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-QuickFill.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -260,9 +261,10 @@
 			isa = PBXGroup;
 			children = (
 				6BC370581C188D98006EB6C7 /* QuickFill.entitlements */,
-				6BE2C3FF1D8D8A4300C9E488 /* QuickFill.xib */,
 				6BC370551C161A79006EB6C7 /* QuickFill.h */,
 				6BC370561C161A79006EB6C7 /* QuickFill.m */,
+				3DAEA10B1F25DA9100AD21AE /* UIColor+Hex.h */,
+				3DAEA10C1F25DA9100AD21AE /* UIColor+Hex.m */,
 				6B1AA0211C04FD0F00C729CD /* KeyboardViewController.h */,
 				6B1AA0221C04FD0F00C729CD /* KeyboardViewController.m */,
 				6B1AA0241C04FD0F00C729CD /* Info.plist */,
@@ -445,7 +447,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6BE2C4001D8D8A4300C9E488 /* QuickFill.xib in Resources */,
 				6BAC02091D8DDBC600D82DAE /* Localizable.strings in Resources */,
 				3DD52FDC1F1848FD0023CEC0 /* gkey.png in Resources */,
 			);
@@ -657,6 +658,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				6BC370571C161A79006EB6C7 /* QuickFill.m in Sources */,
+				3DAEA10D1F25DA9100AD21AE /* UIColor+Hex.m in Sources */,
 				6B1AA0231C04FD0F00C729CD /* KeyboardViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
