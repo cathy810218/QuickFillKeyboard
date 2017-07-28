@@ -22,7 +22,7 @@
 @property (strong, nonatomic) UIButton *deleteKey;
 @property (strong, nonatomic) UIButton *returnKey;
 @property (strong, nonatomic) UIButton *nextKeyboard;
-@property (strong, nonatomic) UILongPressGestureRecognizer *lpgr;
+//@property (strong, nonatomic) UILongPressGestureRecognizer *lpgr;
 
 - (instancetype)initWithFrame:(CGRect)frame;
 
