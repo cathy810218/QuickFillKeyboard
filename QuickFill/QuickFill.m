@@ -10,7 +10,7 @@
 #import <Masonry/Masonry.h>
 #import "UIColor+Hex.h"
 @implementation QuickFill
-
+const int buttonHeight = 32;
 - (instancetype)initWithFrame:(CGRect)frame {
     self = [super initWithFrame:frame];
     if (self) {
@@ -21,9 +21,9 @@
 }
 
 - (void)drawKeys {
-    CGFloat keyboardHeight =  self.bounds.size.height;
-    CGFloat margin = 8.0f;
-    CGFloat buttonHeight = (keyboardHeight - (margin * 6.0)) / 5.0;
+    CGFloat keyboardHeight = self.bounds.size.height;
+    NSLog(@"keyboard height: %f", keyboardHeight);
+    CGFloat margin = (keyboardHeight - (5.0 * buttonHeight)) / 6.0;
     
     self.firstName = [UIButton buttonWithType:UIButtonTypeSystem];
     [self addSubview:self.firstName];
@@ -55,33 +55,32 @@
     [self.firstName mas_makeConstraints:^(MASConstraintMaker *make) {
         make.height.mas_equalTo(buttonHeight);
         make.left.top.mas_equalTo(margin);
-        make.right.equalTo(self.lastName.mas_left).offset(-margin);
     }];
     
     [self.lastName mas_makeConstraints:^(MASConstraintMaker *make) {
         make.height.equalTo(self.firstName);
         make.centerY.equalTo(self.firstName);
-        make.right.equalTo(self.deleteKey.mas_left).offset(-margin);
+        make.left.equalTo(self.firstName.mas_right).offset(margin);
         make.width.equalTo(self.firstName);
     }];
     
     [self.deleteKey mas_makeConstraints:^(MASConstraintMaker *make) {
         make.height.equalTo(self.firstName);
         make.centerY.equalTo(self.firstName);
+        make.left.equalTo(self.lastName.mas_right).offset(margin);
         make.right.mas_equalTo(-margin);
         make.width.equalTo(self).multipliedBy(0.25);
     }];
-    self.deleteKey.backgroundColor = [UIColor colorFromHexString:@"#ACB3BC"];
     
     [self.email mas_makeConstraints:^(MASConstraintMaker *make) {
         make.height.equalTo(self.firstName);
         make.top.equalTo(self.firstName.mas_bottom).offset(margin);
         make.left.mas_equalTo(margin);
-        make.right.equalTo(self.phoneNum.mas_left).offset(-margin);
     }];
     
     [self.phoneNum mas_makeConstraints:^(MASConstraintMaker *make) {
         make.height.equalTo(self.firstName);
+        make.left.equalTo(self.email.mas_right).offset(margin);
         make.centerY.width.equalTo(self.email);
         make.right.mas_equalTo(-margin);
     }];
@@ -90,11 +89,11 @@
         make.height.equalTo(self.firstName);
         make.top.equalTo(self.email.mas_bottom).offset(margin);
         make.left.mas_equalTo(margin);
-        make.right.equalTo(self.phoneNum.mas_left).offset(-margin);
     }];
     
     [self.optionKey mas_makeConstraints:^(MASConstraintMaker *make) {
         make.height.equalTo(self.firstName);
+        make.left.equalTo(self.address1.mas_right).offset(margin);
         make.centerY.width.equalTo(self.address1);
         make.right.mas_equalTo(-margin);
     }];
@@ -102,21 +101,21 @@
     [self.city mas_makeConstraints:^(MASConstraintMaker *make) {
         make.height.equalTo(self.firstName);
         make.left.mas_equalTo(margin);
-        make.right.equalTo(self.state.mas_left).offset(-margin);
-        make.top.greaterThanOrEqualTo(self.address1.mas_bottom).offset(margin);
+        make.top.equalTo(self.address1.mas_bottom).offset(margin);
     }];
     
     [self.state mas_makeConstraints:^(MASConstraintMaker *make) {
         make.height.equalTo(self.firstName);
         make.centerY.equalTo(self.city);
-        make.right.equalTo(self.zip.mas_left).offset(-margin);
+        make.left.equalTo(self.city.mas_right).offset(margin);
         make.width.equalTo(self.city);
     }];
     
     [self.zip mas_makeConstraints:^(MASConstraintMaker *make) {
         make.height.equalTo(self.firstName);
         make.centerY.equalTo(self.city);
-        make.right.mas_greaterThanOrEqualTo(-margin);
+        make.left.equalTo(self.state.mas_right).offset(margin);
+        make.right.mas_equalTo(-margin);
         make.width.equalTo(self.city);
     }];
     
@@ -126,31 +125,30 @@
         make.left.mas_equalTo(margin);
         make.top.equalTo(self.city.mas_bottom).offset(margin);
         make.right.equalTo(self.spaceKey.mas_left).offset(-margin);
-        make.bottom.mas_equalTo(-margin);
+        make.bottom.equalTo(self).offset(-margin);
     }];
     self.nextKeyboard.backgroundColor = [UIColor colorFromHexString:@"#ACB3BC"];
-    self.nextKeyboard.layer.cornerRadius = 5.0;
+    self.nextKeyboard.layer.cornerRadius = 5.0f;
     self.nextKeyboard.layer.masksToBounds = NO;
-    self.nextKeyboard.layer.shadowOpacity = 1.0;
-    self.nextKeyboard.layer.shadowRadius = 0;
-    self.nextKeyboard.layer.shadowOffset = CGSizeMake(0, 1.0);
+    self.nextKeyboard.layer.shadowOpacity = 1.0f;
+    self.nextKeyboard.layer.shadowRadius = 0.0f;
+    self.nextKeyboard.layer.shadowOffset = CGSizeMake(0, 1.0f);
     self.nextKeyboard.layer.shadowColor = [UIColor grayColor].CGColor;
     UIImage *globalImg = [UIImage imageNamed:@"gkey.png"];
     [self.nextKeyboard setBackgroundImage:globalImg forState:UIControlStateNormal];
     
     [self.spaceKey mas_makeConstraints:^(MASConstraintMaker *make) {
         make.height.equalTo(self.firstName);
-        make.width.equalTo(self.address1);
         make.centerY.equalTo(self.nextKeyboard);
         make.right.equalTo(self.returnKey.mas_left).offset(-margin);
     }];
     
     [self.returnKey mas_makeConstraints:^(MASConstraintMaker *make) {
         make.height.equalTo(self.firstName);
+        make.width.equalTo(self.deleteKey);
         make.centerY.equalTo(self.nextKeyboard);
         make.right.mas_equalTo(-margin);
     }];
-    self.returnKey.backgroundColor = [UIColor colorFromHexString:@"#ACB3BC"];
     
     [self setKeyboardKey:self.city withKey: NSLocalizedString(@"city",nil)];
     [self setKeyboardKey:self.state withKey: NSLocalizedString(@"state",nil)];
@@ -164,6 +162,8 @@
     [self setKeyboardKey:self.returnKey withKey: NSLocalizedString(@"return",nil)];
     [self setKeyboardKey:self.deleteKey withKey: NSLocalizedString(@"delete",nil)];
     [self setKeyboardKey:self.optionKey withKey: NSLocalizedString(@"optional", nil)];
+    self.deleteKey.backgroundColor = [UIColor colorFromHexString:@"#ACB3BC"];
+    self.returnKey.backgroundColor = [UIColor colorFromHexString:@"#ACB3BC"];
     
 }
 
@@ -175,7 +175,7 @@
     btn.translatesAutoresizingMaskIntoConstraints = NO;
     btn.layer.shadowOffset = CGSizeMake(0, 1.0);
     [btn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
-    btn.titleLabel.font = [UIFont systemFontOfSize:12];
+    btn.titleLabel.font = [UIFont systemFontOfSize:13];
     [btn setTitle:name forState:UIControlStateNormal];
     btn.contentHorizontalAlignment = UIControlContentVerticalAlignmentCenter;
     btn.backgroundColor = [UIColor colorFromHexString:@"#FFFFFF"];
@@ -194,10 +194,6 @@
     }
 }
 
--(void)drawRect:(CGRect)rect {
-    NSLog(@"draw rect");
-}
-
 //- (UIImage *)imageWithColor:(UIColor *)color {
 //    CGRect rect = CGRectMake(0.0f, 0.0f, 1.0f, 1.0f);
 //    UIGraphicsBeginImageContext(rect.size);
@@ -211,7 +207,6 @@
 //    
 //    return image;
 //}
-
 
 
 @end

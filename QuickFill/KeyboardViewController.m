@@ -17,22 +17,38 @@
 @property (strong, nonatomic) NSDictionary *userInfo;
 
 @property (assign, nonatomic) int timeCount;
+@property (assign, nonatomic) NSLayoutConstraint *keyboardHeight;
+
+@property (nonatomic) CGFloat portraitHeight;
+@property (nonatomic) CGFloat landscapeHeight;
+@property (nonatomic) BOOL isLandscape;
+@property (nonatomic) NSLayoutConstraint *heightConstraint;
+@property (nonatomic) UIButton *nextKeyboardButton;
 
 @end
 
 @implementation KeyboardViewController
 
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    CGFloat _expandedHeight = 216;
+    
+    self.heightConstraint = [NSLayoutConstraint constraintWithItem:self.myKeyboard attribute:NSLayoutAttributeHeight relatedBy:NSLayoutRelationEqual toItem:nil attribute:NSLayoutAttributeNotAnAttribute multiplier:0.0 constant: _expandedHeight];
+    
+    [self.myKeyboard addConstraint: self.heightConstraint];
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     NSUserDefaults *shared = [[NSUserDefaults alloc] initWithSuiteName:@"group.com.cathyoun.QuickFillKeyboard"];
     self.userInfo = [shared valueForKey:@"userInfo"];
-    self.myKeyboard = [[QuickFill alloc] initWithFrame:CGRectMake(0, 0, 0, 208)];
     
+    self.myKeyboard = [[QuickFill alloc] initWithFrame:CGRectMake(0, 0, 0, 200)];
     self.inputView = (UIInputView *)self.myKeyboard;
+    
     [self addGestureToKeyboard];
-}
 
-- (void)viewWillTransitionToSize:(CGSize)size withTransitionCoordinator:(id<UIViewControllerTransitionCoordinator>)coordinator {
+    self.heightConstraint.priority = UILayoutPriorityRequired - 1; // This will eliminate the constraint conflict warning.
 }
 
 - (void)textDidChange:(id<UITextInput>)textInput {
