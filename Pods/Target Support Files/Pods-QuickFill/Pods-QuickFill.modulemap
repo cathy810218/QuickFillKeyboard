@@ -1,0 +1,6 @@
+framework module Pods_QuickFill {
+  umbrella header "Pods-QuickFill-umbrella.h"
+
+  export *
+  module * { export * }
+}

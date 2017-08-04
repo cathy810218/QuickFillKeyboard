@@ -11,6 +11,8 @@
 #import "Constants.h"
 #import "MainViewController.h"
 #import "UIColor+Extension.h"
+#import <Fabric/Fabric.h>
+#import <Crashlytics/Crashlytics.h>
 
 @interface AppDelegate ()
 
@@ -20,6 +22,7 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
+    [Fabric with:@[[Crashlytics class]]];
     // Override point for customization after application launch.
     [Appirater setAppId:kAppID];
     [Appirater setDaysUntilPrompt:2];
@@ -32,7 +35,7 @@
 
     [[UINavigationBar appearance] setBarTintColor: [UIColor primaryColor]];
     [[UINavigationBar appearance] setTitleTextAttributes:@{NSForegroundColorAttributeName : [UIColor whiteColor]}];
-    
+    [[Fabric sharedSDK] setDebug: YES];
     return YES;
 }
 
