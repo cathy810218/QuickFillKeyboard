@@ -9,17 +9,24 @@
 #import "QuickFill.h"
 #import <Masonry/Masonry.h>
 #import "UIColor+Hex.h"
+#import <Fabric/Fabric.h>
+#import <Crashlytics/Crashlytics.h>
+
 @implementation QuickFill
+    
 const int buttonHeight = 32;
-- (instancetype)initWithFrame:(CGRect)frame {
-    self = [super initWithFrame:frame];
+    
+- (instancetype)init {
+    self = [super initWithFrame:CGRectMake(0, 0, 0, 200)];
     if (self) {
         self.backgroundColor = [UIColor colorFromHexString:@"#D1D5DA"];
+        [Fabric with:@[CrashlyticsKit]];
+        
         [self drawKeys];
     }
     return self;
 }
-
+    
 - (void)drawKeys {
     CGFloat keyboardHeight = self.bounds.size.height;
     NSLog(@"keyboard height: %f", keyboardHeight);

@@ -11,20 +11,21 @@
 #import "Constants.h"
 #import <Masonry/Masonry.h>
 #import <Crashlytics/Crashlytics.h>
+
 //#define APP_STORE_ID 1067669330
 static NSString *const iOSAppStoreURLFormat = @"itms-apps://itunes.apple.com/WebObjects/MZStore.woa/wa/viewContentsUserReviews?type=Purple+Software&id=%d";
 
 @interface MainViewController ()
-
+    
 @property (weak, nonatomic) IBOutlet UILabel *fillInfoLabel;
 @property (weak, nonatomic) IBOutlet UILabel *setupLabel;
 @property (weak, nonatomic) IBOutlet UILabel *rateLabel;
-
+    
 @end
 
-@implementation MainViewController 
-
-
+@implementation MainViewController
+    
+    
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = NSLocalizedString(@"QuickFillKeyboard", nil);
@@ -39,7 +40,7 @@ static NSString *const iOSAppStoreURLFormat = @"itms-apps://itunes.apple.com/Web
     [self.view addSubview: self.rateLabel];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(keyboardWillChange:) name:UIKeyboardWillChangeFrameNotification object:nil];
 }
-
+    
 - (void)keyboardWillChange:(NSNotification *)notification {
     NSDictionary *keyboardInfo = [notification userInfo];
     
@@ -51,20 +52,19 @@ static NSString *const iOSAppStoreURLFormat = @"itms-apps://itunes.apple.com/Web
     [shared setObject:rectArr forKey:@"keyboardRect"];
     
 }
-
+    
 - (IBAction)helpButtonPressed:(id)sender {
-    [[Crashlytics sharedInstance] crash];
     HelpViewController *helpVC = [[HelpViewController alloc]init];
     [self.navigationController pushViewController:helpVC animated:YES];
 }
-
-
-- (IBAction)rateMePressed:(id)sender {
-  NSURL *linkMe = [NSURL URLWithString:[NSString stringWithFormat: iOSAppStoreURLFormat, [kAppID intValue]]];
-  [[UIApplication sharedApplication] openURL:linkMe];
+    
+- (IBAction)rateMePressed:(id)sender {    
+    NSURL *linkMe = [NSURL URLWithString:[NSString stringWithFormat: iOSAppStoreURLFormat, [kAppID intValue]]];
+    [[UIApplication sharedApplication] openURL:linkMe];
 }
-
+    
 -(void)dealloc {
     [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
-@end
+    
+    @end

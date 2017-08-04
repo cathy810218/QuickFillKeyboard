@@ -10,6 +10,9 @@
 #import "QuickFill.h"
 #import "InfoViewController.h"
 #import <QuartzCore/QuartzCore.h>
+#import <Crashlytics/Crashlytics.h>
+#import <Crashlytics/Crashlytics.h>
+
 @interface KeyboardViewController ()
 @property (strong, nonatomic) QuickFill *myKeyboard;
 @property (strong, nonatomic) UIPasteboard *pasteboard;
@@ -43,7 +46,7 @@
     NSUserDefaults *shared = [[NSUserDefaults alloc] initWithSuiteName:@"group.com.cathyoun.QuickFillKeyboard"];
     self.userInfo = [shared valueForKey:@"userInfo"];
     
-    self.myKeyboard = [[QuickFill alloc] initWithFrame:CGRectMake(0, 0, 0, 200)];
+    self.myKeyboard = [[QuickFill alloc] init];
     self.inputView = (UIInputView *)self.myKeyboard;
     
     [self addGestureToKeyboard];
