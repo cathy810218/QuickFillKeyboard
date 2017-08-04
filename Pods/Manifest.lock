@@ -1,15 +1,22 @@
 PODS:
   - Appirater (2.1.2)
+  - Crashlytics (3.8.5):
+    - Fabric (~> 1.6.3)
+  - Fabric (1.6.12)
   - Masonry (1.0.2)
 
 DEPENDENCIES:
   - Appirater
+  - Crashlytics
+  - Fabric
   - Masonry
 
 SPEC CHECKSUMS:
   Appirater: f1c9e53e8b612193e6256144f6a0fd2e31f4340d
+  Crashlytics: dfbae35ef22ca189240d230ad501feea4ee85d2d
+  Fabric: f050464eac45a2ce5a8e6e6a07e977c0df32fe28
   Masonry: 7c429b56da9d4ee0bbb3ed77a5ea710d6a5df39e
 
-PODFILE CHECKSUM: f2a8c4fecda9af041cd93ce2e8f37fd070064716
+PODFILE CHECKSUM: ac1bca59b5464b9754192c2c1e628a27f78de542
 
 COCOAPODS: 1.2.1

@@ -9,7 +9,8 @@
 #import "MainViewController.h"
 #import "HelpViewController.h"
 #import "Constants.h"
-#import <Masonry.h>
+#import <Masonry/Masonry.h>
+#import <Crashlytics/Crashlytics.h>
 //#define APP_STORE_ID 1067669330
 static NSString *const iOSAppStoreURLFormat = @"itms-apps://itunes.apple.com/WebObjects/MZStore.woa/wa/viewContentsUserReviews?type=Purple+Software&id=%d";
 
@@ -52,6 +53,7 @@ static NSString *const iOSAppStoreURLFormat = @"itms-apps://itunes.apple.com/Web
 }
 
 - (IBAction)helpButtonPressed:(id)sender {
+    [[Crashlytics sharedInstance] crash];
     HelpViewController *helpVC = [[HelpViewController alloc]init];
     [self.navigationController pushViewController:helpVC animated:YES];
 }
